@@ -21,7 +21,7 @@ namespace TWW_Coop
         public DolphinManager()
         {
             process = new Process();
-            process.StartInfo.FileName = "DOLPHIN_PATH";
+            process.StartInfo.FileName = @"Dolphin\Dolphin.exe";
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.RedirectStandardInput = true;
             process.StartInfo.RedirectStandardOutput = true;
