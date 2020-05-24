@@ -17,7 +17,15 @@ namespace TWW_Coop
     {
         private Process process;
         private bool started = false;
-        
+     
+        public bool isRunning
+        {
+            get
+            {
+                return !process.HasExited;
+            }
+        }
+
         public DolphinManager()
         {
             process = new Process();
@@ -32,6 +40,7 @@ namespace TWW_Coop
         public void Kill()
         {
             process.CloseMainWindow();
+            
             process.Close();
         }
 
