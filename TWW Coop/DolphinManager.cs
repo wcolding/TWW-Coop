@@ -17,6 +17,8 @@ namespace TWW_Coop
     {
         private Process process;
         private bool started = false;
+        private readonly int bufferSize = 128;
+        private byte[] readBuffer;
      
         public bool isRunning
         {
@@ -35,6 +37,9 @@ namespace TWW_Coop
             process.StartInfo.RedirectStandardOutput = true;
             process.Start();
             started = true;
+
+            readBuffer = new byte[bufferSize];
+            ZeroReadBuffer();
         }
 
         public void Kill()
@@ -53,10 +58,30 @@ namespace TWW_Coop
             return "Dolphin process did not start properly";
         }
 
+        public byte[] ReadLineBytes()
+        {
+            ZeroReadBuffer();
+            for (int i = 0; i < readBuffer.Length; i++)
+            {
+                readBuffer[i] = (byte)process.StandardOutput.Read();
+                if (readBuffer[i] == '\n')
+                    break;
+            }
+
+
+            return readBuffer;
+        }
+
         public void WriteLine(string msg)
         {
             if (started)
                 process.StandardInput.WriteLine(msg);
+        }
+
+        private void ZeroReadBuffer()
+        {
+            for (int i = 0; i < readBuffer.Length; i++)
+                readBuffer[i] = 0;
         }
 
 

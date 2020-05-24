@@ -95,7 +95,7 @@ namespace TWW_Coop
         NoItem = 0xFF
     }
 
-    enum WWBottleContents
+    public enum WWBottleContents : byte
     {
         Empty       = 0x50,
         RedPotion   = 0x51,
@@ -110,7 +110,7 @@ namespace TWW_Coop
     }
 
     [Flags]
-    enum WWSongMask
+    public enum WWSongMask : byte
     {
         None           = 0,
         WindsRequiem   = 0x01,
@@ -122,7 +122,7 @@ namespace TWW_Coop
     }
 
     [Flags]
-    enum WWPearlMask : byte
+    public enum WWPearlMask : byte
     { 
         None   = 0,
         Nayru  = 0x01,
@@ -131,7 +131,7 @@ namespace TWW_Coop
     }
 
     [Flags]
-    enum WWTriforceMask : byte
+    public enum WWTriforceMask : byte
     {
         None      = 0,
         Triforce1 = 0x01,
@@ -145,7 +145,7 @@ namespace TWW_Coop
     }
 
     [Flags]
-    enum WWStatueMask : byte
+    public enum WWStatueMask : byte
     {
         None      = 0,
         Dragon    = 0b00000100,
@@ -156,7 +156,7 @@ namespace TWW_Coop
     }
 
     [Flags]
-    enum WWChartMask : Int64
+    public enum WWChartMask : Int64
     {
         None = 0,
         TreasureChart10 = 1,

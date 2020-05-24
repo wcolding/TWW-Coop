@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace TWW_Coop
 {
@@ -63,11 +64,23 @@ namespace TWW_Coop
             while (listeningToDolphin && dolphin.isRunning)
             {
                 string msg = dolphin.ReadLine();
+                byte[] msgB = dolphin.ReadLineBytes();
+
+                PlayerStatus player = new PlayerStatus();
+                int playerSize = Marshal.SizeOf(player);
+                IntPtr buffer = Marshal.AllocHGlobal(playerSize);
+                Marshal.Copy(msgB, 0, buffer, playerSize);
+                player = Marshal.PtrToStructure<PlayerStatus>(buffer);
+                Marshal.FreeHGlobal(buffer);
+
+                ushort rupees = player.status.currentRupees;
+
+                string msgC = BitConverter.ToString(msgB);
 
                 if (msg == null)
                     msg = "DISCONNECTED";
-
-                dolphinInQueue.Add(msg);
+                
+                dolphinInQueue.Add(msgC);
 
                 if (dolphinInQueue.Count > 0)
                 {

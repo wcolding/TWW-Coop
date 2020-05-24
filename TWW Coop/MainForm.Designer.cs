@@ -52,6 +52,7 @@
             this.consoleBox.Multiline = true;
             this.consoleBox.Name = "consoleBox";
             this.consoleBox.ReadOnly = true;
+            this.consoleBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.consoleBox.Size = new System.Drawing.Size(376, 263);
             this.consoleBox.TabIndex = 1;
             // 
