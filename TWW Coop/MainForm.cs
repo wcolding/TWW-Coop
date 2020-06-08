@@ -61,26 +61,28 @@ namespace TWW_Coop
 
         private void DolphinListener(object sender, DoWorkEventArgs e)
         {
+            PlayerStatus player = new PlayerStatus();
+            int playerSize = Marshal.SizeOf(player);
+            bool gotShield = false;
+
             while (listeningToDolphin && dolphin.isRunning)
             {
-                string msg = dolphin.ReadLine();
-                byte[] msgB = dolphin.ReadLineBytes();
-
-                PlayerStatus player = new PlayerStatus();
-                int playerSize = Marshal.SizeOf(player);
-                IntPtr buffer = Marshal.AllocHGlobal(playerSize);
-                Marshal.Copy(msgB, 0, buffer, playerSize);
-                player = Marshal.PtrToStructure<PlayerStatus>(buffer);
-                Marshal.FreeHGlobal(buffer);
-
-                ushort rupees = player.status.currentRupees;
-
-                string msgC = BitConverter.ToString(msgB);
-
-                if (msg == null)
-                    msg = "DISCONNECTED";
+                DolphinPacket msg = dolphin.ReadPacket();
                 
-                dolphinInQueue.Add(msgC);
+                if (msg.type == PacketType.PlayerStatusInfo)
+                {
+                    IntPtr buffer = Marshal.AllocHGlobal(playerSize);
+                    Marshal.Copy(msg.data, 0, buffer, playerSize);
+                    player = Marshal.PtrToStructure<PlayerStatus>(buffer);
+                    Marshal.FreeHGlobal(buffer);
+
+                    if ((player.inventory.shield == (byte)WWItem.Shield2) && !gotShield)
+                    {
+                        dolphinInQueue.Add("Got Mirror Shield!");
+                        gotShield = true;
+                    }
+                }
+
 
                 if (dolphinInQueue.Count > 0)
                 {

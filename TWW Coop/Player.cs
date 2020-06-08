@@ -20,7 +20,7 @@ namespace TWW_Coop
     {
         public ushort maxHP;
         public ushort currentHP;
-        public ushort wallet;
+        public byte wallet;
         public ushort currentRupees;
         public byte maxMagic;
         public byte currentMagic;
