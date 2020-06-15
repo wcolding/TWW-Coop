@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -85,8 +88,91 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\item_Shield2.png" />
+    <None Include="Icons\item_Shield1.png" />
+    <None Include="Icons\item_ShieldN.png" />
+    <Content Include="Icons\bag_BaitBag.png" />
+    <Content Include="Icons\bag_BaitBagN.png" />
+    <Content Include="Icons\bag_DeliveryBag.png" />
+    <Content Include="Icons\bag_DeliveryBagN.png" />
+    <Content Include="Icons\bag_SpoilsBag.png" />
+    <Content Include="Icons\bag_SpoilsBagN.png" />
+    <Content Include="Icons\capacity_Bomb60.png" />
+    <Content Include="Icons\capacity_Bomb99.png" />
+    <Content Include="Icons\capacity_Bow60.png" />
+    <Content Include="Icons\capacity_Wallet1.png" />
+    <Content Include="Icons\capacity_Wallet2.png" />
+    <Content Include="Icons\capacity_WalletN.png" />
+    <Content Include="Icons\capactiy_Bow99.png" />
+    <Content Include="Icons\dungeon_BossKey.png" />
+    <Content Include="Icons\dungeon_Map.png" />
+    <Content Include="Icons\dungeon_SmallKey.png" />
+    <Content Include="Icons\item_Bomb.png" />
+    <Content Include="Icons\item_BombN.png" />
+    <Content Include="Icons\item_Boomerang.png" />
+    <Content Include="Icons\item_BoomerangN.png" />
+    <Content Include="Icons\item_Bottle.png" />
+    <Content Include="Icons\item_BottleN.png" />
+    <Content Include="Icons\item_Bow1.png" />
+    <Content Include="Icons\item_Bow2.png" />
+    <Content Include="Icons\item_Bow3.png" />
+    <Content Include="Icons\item_BowN.png" />
+    <Content Include="Icons\item_CabanaDeed.png" />
+    <Content Include="Icons\item_CabanaDeedN.png" />
+    <Content Include="Icons\item_DekuLeaf.png" />
+    <Content Include="Icons\item_DekuLeafN.png" />
+    <Content Include="Icons\item_GhostShipChart.png" />
+    <Content Include="Icons\item_GhostShipChartN.png" />
+    <Content Include="Icons\item_GrapplingHook.png" />
+    <Content Include="Icons\item_GrapplingHookN.png" />
+    <Content Include="Icons\item_Hookshot.png" />
+    <Content Include="Icons\item_HookshotN.png" />
+    <Content Include="Icons\item_IronBoots.png" />
+    <Content Include="Icons\item_IronBootsN.png" />
+    <Content Include="Icons\item_MagicArmor.png" />
+    <Content Include="Icons\item_MagicArmorN.png" />
+    <Content Include="Icons\item_PictoBox1.png" />
+    <Content Include="Icons\item_PictoBox2.png" />
+    <Content Include="Icons\item_PictoBoxN.png" />
+    <Content Include="Icons\item_PowerBracelets.png" />
+    <Content Include="Icons\item_PowerBraceletsN.png" />
+    <Content Include="Icons\item_SkullHammer.png" />
+    <Content Include="Icons\item_SkullHammerN.png" />
+    <Content Include="Icons\item_SwiftSail.png" />
+    <Content Include="Icons\item_SwiftSailN.png" />
+    <Content Include="Icons\item_Sword1.png" />
+    <Content Include="Icons\item_Sword2.png" />
+    <Content Include="Icons\item_Sword3.png" />
+    <Content Include="Icons\item_Sword4.png" />
+    <Content Include="Icons\item_SwordN.png" />
+    <Content Include="Icons\item_Telescope.png" />
+    <Content Include="Icons\item_TelescopeN.png" />
+    <Content Include="Icons\item_TingleTuner.png" />
+    <Content Include="Icons\item_TingleTunerN.png" />
+    <Content Include="Icons\item_WindWaker.png" />
+    <Content Include="Icons\item_WindWakerN.png" />
+    <Content Include="Icons\pearl_Din.png" />
+    <Content Include="Icons\pearl_DinN.png" />
+    <Content Include="Icons\pearl_Farore.png" />
+    <Content Include="Icons\pearl_FaroreN.png" />
+    <Content Include="Icons\pearl_Nayru.png" />
+    <Content Include="Icons\pearl_NayruN.png" />
+    <Content Include="Icons\quest_TingleStatue.png" />
+    <Content Include="Icons\quest_Triforce.png" />
+    <Content Include="Icons\song_BalladofGales.png" />
+    <Content Include="Icons\song_CommandMelody.png" />
+    <Content Include="Icons\song_EarthGodsLyric.png" />
+    <Content Include="Icons\song_SongofPassing.png" />
+    <Content Include="Icons\song_WindGodsAria.png" />
+    <Content Include="Icons\song_WindsRequiem.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>echo D|xcopy "$(SolutionDir)Dolphin\Binary\x64" "$(TargetDir)\Dolphin" /e /y /c</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>echo D|xcopy "$(SolutionDir)Dolphin\Binary\x64" "$(TargetDir)\Dolphin" /e /y /c</PreBuildEvent>
   </PropertyGroup>
 </Project>

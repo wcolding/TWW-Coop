@@ -19,12 +19,14 @@ namespace TWW_Coop
     {
 
         private readonly int PLAYER_STATUS_SIZE = 79;
+        private readonly int GIVE_ITEM_SIZE = 5;
 
         private Process process;
         private bool started = false;
         private readonly int bufferSize = 128;
         private byte[] readBuffer;
         private StreamReader fromStream;
+        private StreamWriter toStream;
 
         private NamedPipeServerStream fromDolphin = new NamedPipeServerStream("fromDolphin", PipeDirection.In);
         private NamedPipeServerStream toDolphin = new NamedPipeServerStream("toDolphin", PipeDirection.Out);
@@ -44,12 +46,14 @@ namespace TWW_Coop
             process.StartInfo.UseShellExecute = false;
 
             fromStream = new StreamReader(fromDolphin);
+            toStream = new StreamWriter(toDolphin);
 
             process.Start();
             started = true;
             readBuffer = new byte[bufferSize];
             ZeroReadBuffer();
             fromDolphin.WaitForConnection();
+            toDolphin.WaitForConnection();
         }
 
         public void Kill()
@@ -86,10 +90,17 @@ namespace TWW_Coop
             return thisPacket;
         }
 
-        public void WriteLine(string msg)
+        public void GiveItem(WWItem item)
         {
-            if (started)
-                process.StandardInput.WriteLine(msg);
+            if (!toDolphin.IsConnected || !started)
+                return;
+
+            DolphinPacket givePacket = new DolphinPacket();
+            givePacket.type = PacketType.GiveItem;
+            givePacket.data[0] = (byte)item;
+            byte[] buffer = givePacket.Pack();
+
+            toStream.BaseStream.Write(buffer, 0, buffer.Length);
         }
 
         private void ZeroReadBuffer()
@@ -112,11 +123,24 @@ namespace TWW_Coop
             data = new byte[1];
             data[0] = 0;
         }
+
+        public byte[] Pack()
+        {
+            byte[] buffer = new byte[data.Length + 4];
+            byte[] typeBuffer = new byte[4];
+            typeBuffer = BitConverter.GetBytes((int)type);
+            Array.Copy(typeBuffer, 0, buffer, 0, 4);
+            Array.Copy(data, 0, buffer, 4, data.Length);
+            
+            return buffer;
+        }
     }
 
     public enum PacketType : int
     {
         None = 0,
-        PlayerStatusInfo = 1
+        PlayerStatusInfo = 1,
+        WorldState = 2,
+        GiveItem = 3
     }
 }
