@@ -295,7 +295,7 @@ namespace TWW_Coop
 
         private void testButton_Click(object sender, EventArgs e)
         {
-            dolphin.GiveItem(WWItem.Boots);
+            dolphin.GiveItem(WWItem.PictoBox2);
         }
     }
 }

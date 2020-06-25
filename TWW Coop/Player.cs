@@ -7,8 +7,6 @@ using System.Runtime.InteropServices;
 
 namespace TWW_Coop
 {
-    // Need structs to be padded in Dolphin to sizes that are multiples of 4
-    // padding should be on the end if possible
     [StructLayout(LayoutKind.Sequential, Pack = 1)]
     public class Bag
     {

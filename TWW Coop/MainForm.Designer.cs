@@ -274,7 +274,7 @@
             this.testButton.Name = "testButton";
             this.testButton.Size = new System.Drawing.Size(150, 41);
             this.testButton.TabIndex = 21;
-            this.testButton.Text = "Give Boots";
+            this.testButton.Text = "Give Picto2";
             this.testButton.UseVisualStyleBackColor = true;
             this.testButton.Click += new System.EventHandler(this.testButton_Click);
             // 
