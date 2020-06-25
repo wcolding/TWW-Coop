@@ -64,6 +64,11 @@ namespace TWW_Coop
             PlayerStatus player = new PlayerStatus();
             PlayerStatus old = new PlayerStatus();
             int playerSize = Marshal.SizeOf(player);
+
+            WorldState state = new WorldState();
+            WorldState oldState = new WorldState();
+            int worldStateSize = Marshal.SizeOf(state);
+
             bool firstPass = true;
 
             while (listeningToDolphin && dolphin.isRunning)
@@ -75,7 +80,7 @@ namespace TWW_Coop
                     IntPtr buffer = Marshal.AllocHGlobal(playerSize);
                     Marshal.Copy(msg.data, 0, buffer, playerSize);
                     player = Marshal.PtrToStructure<PlayerStatus>(buffer);
-                    Marshal.FreeHGlobal(buffer);
+                    Marshal.FreeHGlobal(buffer); // perhaps we'll move to allocating on connect and freeing on disconnect?
                     
                     if (firstPass)
                     {
@@ -274,6 +279,31 @@ namespace TWW_Coop
 
                     old = player;
                     #endregion
+                }
+
+                if (msg.type == PacketType.WorldState)
+                {
+                    IntPtr buffer = Marshal.AllocHGlobal(worldStateSize);
+                    Marshal.Copy(msg.data, 0, buffer, worldStateSize);
+                    state = Marshal.PtrToStructure<WorldState>(buffer);
+                    Marshal.FreeHGlobal(buffer);
+                    
+                    if (firstPass)
+                    {
+                        firstPass = false;
+                        oldState = state;
+                    }
+
+                    if ((state.StageName != "sea_T") && (state.StageName != "Name") && (state.StageName != "\0\0\0\0\0\0\0\0"))
+                    {
+                        if ((state.StageName != oldState.StageName) || (state.zone != oldState.zone) || (state.stageID != oldState.stageID))
+                        {
+                            string movedMsg = String.Format("Player '{0}' moved to stage '{1}' (ID {2}), zone {3}", state.PlayerName, state.StageName, state.stageID, state.zone);
+                            dolphinInQueue.Add(movedMsg);
+                        }
+                    }
+
+                    oldState = state;
                 }
 
 

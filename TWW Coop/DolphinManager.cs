@@ -19,11 +19,12 @@ namespace TWW_Coop
     {
 
         private readonly int PLAYER_STATUS_SIZE = 79;
+        private readonly int WORLD_STATE_SIZE = 562;
         private readonly int GIVE_ITEM_SIZE = 5;
 
         private Process process;
         private bool started = false;
-        private readonly int bufferSize = 128;
+        private readonly int bufferSize = 1024;
         private byte[] readBuffer;
         private StreamReader fromStream;
         private StreamWriter toStream;
@@ -81,6 +82,10 @@ namespace TWW_Coop
                 case PacketType.PlayerStatusInfo:
                     thisPacket.data = new byte[PLAYER_STATUS_SIZE];
                     Array.Copy(readBuffer, 4, thisPacket.data, 0, PLAYER_STATUS_SIZE);
+                    break;
+                case PacketType.WorldState:
+                    thisPacket.data = new byte[WORLD_STATE_SIZE];
+                    Array.Copy(readBuffer, 4, thisPacket.data, 0, WORLD_STATE_SIZE);
                     break;
                 default:
                     thisPacket.type = PacketType.None;
