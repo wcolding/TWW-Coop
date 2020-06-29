@@ -24,6 +24,15 @@ namespace TWW_Coop
         public MainForm()
         {
             InitializeComponent();
+
+            triforcePicture.Controls.Add(triforceCounter);
+            triforceCounter.Location = new Point(22, 18);
+            triforceCounter.BackColor = Color.Transparent;
+
+            //bowCapacity.Visible = false;
+            //bombCapacity.Visible = false;
+            //bottleCounter.Visible = false;
+
             modeBox.SelectedIndex = 0;
 
             dolphin = new DolphinManager();
@@ -33,9 +42,6 @@ namespace TWW_Coop
             listeningToDolphin = true;
             dolphinInQueue = new List<string>();
             dolphinListener.RunWorkerAsync();
-
-            //string newTitle = dolphin.ReadLine();
-            //PrintConsole(newTitle);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -234,31 +240,26 @@ namespace TWW_Coop
                         }
                     }
 
+                    if (player.ammo.bowCapacity != old.ammo.bowCapacity)
+                    {
+                        ThreadSetText(bowCapacity, player.ammo.bowCapacity.ToString());
+                    }
+
                     if (player.inventory.bombs != old.inventory.bombs)
                     {
                         if (player.inventory.bombs == (byte)WWItem.Bombs)
+                        {
                             bombsPicture.Image = TWW_Coop.Resources.item_Bomb;
+                        }
                         else
+                        {
                             bombsPicture.Image = TWW_Coop.Resources.item_BombN;
+                        }
                     }
 
                     if (player.ammo.bombCapacity != old.ammo.bombCapacity)
                     {
-                        if (player.inventory.bombs == (byte)WWItem.Bombs)
-                        {
-                            switch (player.ammo.bombCapacity)
-                            {
-                                case 60:
-                                    bombsPicture.Image = TWW_Coop.Resources.capacity_Bomb60;
-                                    break;
-                                case 99:
-                                    bombsPicture.Image = TWW_Coop.Resources.capacity_Bomb99;
-                                    break;
-                                default:
-                                    bombsPicture.Image = TWW_Coop.Resources.item_Bomb;
-                                    break;
-                            }
-                        }
+                        ThreadSetText(bombCapacity, player.ammo.bombCapacity.ToString());
                     }
 
                     if (player.inventory.shield != old.inventory.shield)
@@ -275,6 +276,31 @@ namespace TWW_Coop
                                 shieldPicture.Image = TWW_Coop.Resources.item_ShieldN;
                                 break;
                         }
+                    }
+
+                    if (player.questStatus.triforce != old.questStatus.triforce)
+                    {
+                        ThreadSetText(triforceCounter, player.questStatus.GetTriforceCount().ToString());
+                        //Invoke(new Action(() =>
+                        //{
+                        //triforceCounter.Text = player.questStatus.GetTriforceCount().ToString();
+                        //}));
+                    }
+
+                    // "Disposable" items to keep on the tracker once found
+                    if (player.bags.deliveryBag.HasItem(WWItem.MaggiesLetter))
+                    {
+                        maggiesLetterPicture.Image = TWW_Coop.Resources.mail_MaggiesLetter;
+                    }
+
+                    if (player.bags.deliveryBag.HasItem(WWItem.MoblinsLetter))
+                    {
+                        moblinsLetterPicture.Image = TWW_Coop.Resources.mail_MoblinsLetter;
+                    }
+
+                    if (player.bags.deliveryBag.HasItem(WWItem.NotetoMom))
+                    {
+                        noteToMomPicture.Image = TWW_Coop.Resources.mail_NoteToMom;
                     }
 
                     old = player;
@@ -326,6 +352,27 @@ namespace TWW_Coop
         private void testButton_Click(object sender, EventArgs e)
         {
             dolphin.GiveItem(WWItem.PictoBox2);
+        }
+
+        private void triforcePicture_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ThreadSetText(Label label, string text)
+        {
+            Invoke(new Action(() =>
+            {
+                label.Text = text;
+            }));
+        }
+
+        private void ThreadSetTextVisible(Label label, bool visible)
+        {
+            Invoke(new Action(() =>
+            {
+                label.Visible = visible;
+            }));
         }
     }
 }

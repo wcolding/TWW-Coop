@@ -11,6 +11,14 @@ namespace TWW_Coop
     public class Bag
     {
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 8)] public byte[] contents;
+
+        public bool HasItem(WWItem item)
+        {
+            for (int i = 0; i < 8; i++)
+                if (contents[i] == (byte)item)
+                    return true;
+            return false;
+        }
     }
 
     [StructLayout(LayoutKind.Sequential, Pack = 1)]
@@ -84,6 +92,19 @@ namespace TWW_Coop
         public WWPearlMask pearls;
         public WWStatueMask statues;
         public WWChartMask charts;
+
+        public int GetTriforceCount()
+        {
+            int count = 0;
+            int shard = 0;
+            for (int i = 0; i < 8; i++)
+            {
+                shard = 1 << i;
+                if (((int)triforce & shard) != 0)
+                    count++;
+            }
+            return count;
+        }
     }
 
     [StructLayout(LayoutKind.Sequential, Pack = 1)]

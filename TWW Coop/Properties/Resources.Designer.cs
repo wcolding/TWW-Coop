@@ -693,9 +693,9 @@ namespace TWW_Coop {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pearl_Din {
+        internal static System.Drawing.Bitmap mail_MaggiesLetter {
             get {
-                object obj = ResourceManager.GetObject("pearl_Din", resourceCulture);
+                object obj = ResourceManager.GetObject("mail_MaggiesLetter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -703,9 +703,169 @@ namespace TWW_Coop {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pearl_DinN {
+        internal static System.Drawing.Bitmap mail_MoblinsLetter {
             get {
-                object obj = ResourceManager.GetObject("pearl_DinN", resourceCulture);
+                object obj = ResourceManager.GetObject("mail_MoblinsLetter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mail_N {
+            get {
+                object obj = ResourceManager.GetObject("mail_N", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mail_NoteToMom {
+            get {
+                object obj = ResourceManager.GetObject("mail_NoteToMom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap number_0 {
+            get {
+                object obj = ResourceManager.GetObject("number_0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap number_1 {
+            get {
+                object obj = ResourceManager.GetObject("number_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap number_2 {
+            get {
+                object obj = ResourceManager.GetObject("number_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap number_3 {
+            get {
+                object obj = ResourceManager.GetObject("number_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap number_30 {
+            get {
+                object obj = ResourceManager.GetObject("number_30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap number_4 {
+            get {
+                object obj = ResourceManager.GetObject("number_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap number_5 {
+            get {
+                object obj = ResourceManager.GetObject("number_5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap number_6 {
+            get {
+                object obj = ResourceManager.GetObject("number_6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap number_60 {
+            get {
+                object obj = ResourceManager.GetObject("number_60", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap number_7 {
+            get {
+                object obj = ResourceManager.GetObject("number_7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap number_8 {
+            get {
+                object obj = ResourceManager.GetObject("number_8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap number_9 {
+            get {
+                object obj = ResourceManager.GetObject("number_9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap number_99 {
+            get {
+                object obj = ResourceManager.GetObject("number_99", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pearl_Din {
+            get {
+                object obj = ResourceManager.GetObject("pearl_Din", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -723,9 +883,9 @@ namespace TWW_Coop {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pearl_FaroreN {
+        internal static System.Drawing.Bitmap pearl_N {
             get {
-                object obj = ResourceManager.GetObject("pearl_FaroreN", resourceCulture);
+                object obj = ResourceManager.GetObject("pearl_N", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -736,16 +896,6 @@ namespace TWW_Coop {
         internal static System.Drawing.Bitmap pearl_Nayru {
             get {
                 object obj = ResourceManager.GetObject("pearl_Nayru", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pearl_NayruN {
-            get {
-                object obj = ResourceManager.GetObject("pearl_NayruN", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
