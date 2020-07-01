@@ -105,6 +105,19 @@ namespace TWW_Coop
             }
             return count;
         }
+
+        public int GetStatueCount()
+        {
+            int count = 0;
+            int statue = 0;
+            for (int i = 2; i < 7; i++) // statues are in a weird range of the bitmask
+            {
+                statue = 1 << i;
+                if (((int)statues & statue) != 0)
+                    count++;
+            }
+            return count;
+        }
     }
 
     [StructLayout(LayoutKind.Sequential, Pack = 1)]

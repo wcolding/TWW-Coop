@@ -153,6 +153,36 @@ namespace TWW_Coop {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap capacity_Magic1 {
+            get {
+                object obj = ResourceManager.GetObject("capacity_Magic1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap capacity_Magic2 {
+            get {
+                object obj = ResourceManager.GetObject("capacity_Magic2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap capacity_MagicN {
+            get {
+                object obj = ResourceManager.GetObject("capacity_MagicN", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap capacity_Wallet1 {
             get {
                 object obj = ResourceManager.GetObject("capacity_Wallet1", resourceCulture);

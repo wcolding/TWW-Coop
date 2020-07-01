@@ -26,7 +26,7 @@ namespace TWW_Coop
             InitializeComponent();
 
             triforcePicture.Controls.Add(triforceCounter);
-            triforceCounter.Location = new Point(22, 18);
+            triforceCounter.Location = new Point(32, 26);
             triforceCounter.BackColor = Color.Transparent;
 
             //bowCapacity.Visible = false;
@@ -262,6 +262,30 @@ namespace TWW_Coop
                         ThreadSetText(bombCapacity, player.ammo.bombCapacity.ToString());
                     }
 
+                    if (player.inventory.deliveryBag != old.inventory.deliveryBag)
+                    {
+                        if (player.inventory.deliveryBag == (byte)WWItem.MailBag)
+                            deliveryBagPicture.Image = TWW_Coop.Resources.bag_DeliveryBag;
+                        else
+                            deliveryBagPicture.Image = TWW_Coop.Resources.bag_DeliveryBagN;
+                    }
+
+                    if (player.inventory.hookshot != old.inventory.hookshot)
+                    {
+                        if (player.inventory.hookshot == (byte)WWItem.Hookshot)
+                            hookshotPicture.Image = TWW_Coop.Resources.item_Hookshot;
+                        else
+                            hookshotPicture.Image = TWW_Coop.Resources.item_HookshotN;
+                    }
+
+                    if (player.inventory.skullHammer != old.inventory.skullHammer)
+                    {
+                        if (player.inventory.skullHammer == (byte)WWItem.Hammer)
+                            skullHammerPicture.Image = TWW_Coop.Resources.item_SkullHammer;
+                        else
+                            skullHammerPicture.Image = TWW_Coop.Resources.item_SkullHammerN;
+                    }
+
                     if (player.inventory.shield != old.inventory.shield)
                     {
                         switch (player.inventory.shield)
@@ -281,13 +305,110 @@ namespace TWW_Coop
                     if (player.questStatus.triforce != old.questStatus.triforce)
                     {
                         ThreadSetText(triforceCounter, player.questStatus.GetTriforceCount().ToString());
-                        //Invoke(new Action(() =>
-                        //{
-                        //triforceCounter.Text = player.questStatus.GetTriforceCount().ToString();
-                        //}));
+                    }
+
+                    if (player.questStatus.statues != old.questStatus.statues)
+                    {
+                        ThreadSetText(tingleCounter, player.questStatus.GetStatueCount().ToString());
+                    }
+
+                    if (player.questStatus.pearls != old.questStatus.pearls)
+                    {
+                        if ((player.questStatus.pearls & WWPearlMask.Din) != 0)
+                            dinPicture.Image = TWW_Coop.Resources.pearl_Din;
+                        else
+                            dinPicture.Image = TWW_Coop.Resources.pearl_N;
+
+                        if ((player.questStatus.pearls & WWPearlMask.Farore) != 0)
+                            farorePicture.Image = TWW_Coop.Resources.pearl_Farore;
+                        else
+                            farorePicture.Image = TWW_Coop.Resources.pearl_N;
+
+                        if ((player.questStatus.pearls & WWPearlMask.Nayru) != 0)
+                            nayruPicture.Image = TWW_Coop.Resources.pearl_Nayru;
+                        else
+                            nayruPicture.Image = TWW_Coop.Resources.pearl_N;
+                    }
+
+                    if (player.questStatus.songs != old.questStatus.songs)
+                    {
+                        if ((player.questStatus.songs & WWSongMask.WindsRequiem) != 0)
+                            windsRequiemPicture.Image = TWW_Coop.Resources.song_WindsRequiem;
+                        else
+                            windsRequiemPicture.Image = TWW_Coop.Resources.item_WindWakerN;
+
+                        if ((player.questStatus.songs & WWSongMask.BalladofGales) != 0)
+                            balladOfGalesPicture.Image = TWW_Coop.Resources.song_BalladofGales;
+                        else
+                            balladOfGalesPicture.Image = TWW_Coop.Resources.item_WindWakerN;
+
+                        if ((player.questStatus.songs & WWSongMask.CommandMelody) != 0)
+                            commandMelodyPicture.Image = TWW_Coop.Resources.song_CommandMelody;
+                        else
+                            commandMelodyPicture.Image = TWW_Coop.Resources.item_WindWakerN;
+
+                        if ((player.questStatus.songs & WWSongMask.EarthGodsLyric) != 0)
+                            earthGodsLyricPicture.Image = TWW_Coop.Resources.song_EarthGodsLyric;
+                        else
+                            earthGodsLyricPicture.Image = TWW_Coop.Resources.item_WindWakerN;
+
+                        if ((player.questStatus.songs & WWSongMask.WindGodsAria) != 0)
+                            windGodsAriaPicture.Image = TWW_Coop.Resources.song_WindGodsAria;
+                        else
+                            windGodsAriaPicture.Image = TWW_Coop.Resources.item_WindWakerN;
+
+                        if ((player.questStatus.songs & WWSongMask.SongofPassing) != 0)
+                            songOfPassingPicture.Image = TWW_Coop.Resources.song_SongofPassing;
+                        else
+                            songOfPassingPicture.Image = TWW_Coop.Resources.item_WindWakerN;
+                    }
+
+                    if (player.questStatus.charts.HasFlag(WWChartMask.GhostShipChart))
+                    {
+                        ghostShipChartPicture.Image = TWW_Coop.Resources.item_GhostShipChart;
+                    }
+
+                    if (player.status.maxMagic != old.status.maxMagic)
+                    {
+                        switch (player.status.maxMagic)
+                        {
+                            case 0x10:
+                                magicPicture.Image = TWW_Coop.Resources.capacity_Magic1;
+                                break;
+                            case 0x20:
+                                magicPicture.Image = TWW_Coop.Resources.capacity_Magic2;
+                                break;
+                            default:
+                                magicPicture.Image = TWW_Coop.Resources.capacity_MagicN;
+                                break;
+                        }
+                    }
+
+                    if (player.status.wallet != old.status.wallet)
+                    {
+                        switch (player.status.wallet)
+                        {
+                            case 0:
+                                walletPicture.Image = TWW_Coop.Resources.capacity_WalletN;
+                                break;
+                            case 1:
+                                walletPicture.Image = TWW_Coop.Resources.capacity_Wallet1;
+                                break;
+                            case 2:
+                                walletPicture.Image = TWW_Coop.Resources.capacity_Wallet2;
+                                break;
+                            default:
+                                walletPicture.Image = TWW_Coop.Resources.capacity_WalletN;
+                                break;
+                        }
                     }
 
                     // "Disposable" items to keep on the tracker once found
+                    if (player.bags.deliveryBag.HasItem(WWItem.CabanaDeed))
+                    {
+                        cabanaDeedPicture.Image = TWW_Coop.Resources.item_CabanaDeed;
+                    }
+
                     if (player.bags.deliveryBag.HasItem(WWItem.MaggiesLetter))
                     {
                         maggiesLetterPicture.Image = TWW_Coop.Resources.mail_MaggiesLetter;

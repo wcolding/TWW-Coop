@@ -102,6 +102,9 @@
     <Content Include="Icons\capacity_Bomb60.png" />
     <Content Include="Icons\capacity_Bomb99.png" />
     <Content Include="Icons\capacity_Bow60.png" />
+    <None Include="Icons\capacity_Magic1.png" />
+    <None Include="Icons\capacity_Magic2.png" />
+    <None Include="Icons\capacity_MagicN.png" />
     <Content Include="Icons\capacity_Wallet1.png" />
     <Content Include="Icons\capacity_Wallet2.png" />
     <Content Include="Icons\capacity_WalletN.png" />
