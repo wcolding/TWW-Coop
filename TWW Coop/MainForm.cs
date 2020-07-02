@@ -20,6 +20,7 @@ namespace TWW_Coop
         public static DolphinManager dolphin;
         private static bool listeningToDolphin;
         private List<string> dolphinInQueue;
+        private static bool trainermode = false;
 
         public MainForm()
         {
@@ -29,9 +30,7 @@ namespace TWW_Coop
             triforceCounter.Location = new Point(32, 26);
             triforceCounter.BackColor = Color.Transparent;
 
-            //bowCapacity.Visible = false;
-            //bombCapacity.Visible = false;
-            //bottleCounter.Visible = false;
+            trainerModeCheckbox.Checked = trainermode;
 
             modeBox.SelectedIndex = 0;
 
@@ -465,9 +464,13 @@ namespace TWW_Coop
             }
         }
 
-        private void telescopePicture_Click(object sender, EventArgs e)
+        private void telescopePicture_Click(object sender, MouseEventArgs e)
         {
-
+            if (trainermode)
+            {
+                if (e.Button == MouseButtons.Left)
+                    dolphin.GiveItem(WWItem.Telecope);
+            }
         }
 
         private void testButton_Click(object sender, EventArgs e)
@@ -494,6 +497,22 @@ namespace TWW_Coop
             {
                 label.Visible = visible;
             }));
+        }
+
+        private void trainerModeCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            trainermode = trainerModeCheckbox.Checked;
+        }
+
+        private void bowPicture_Click(object sender, MouseEventArgs e)
+        {
+            if (trainermode)
+            {
+                if (e.Button == MouseButtons.Left)
+                    dolphin.UpgradeItem(ItemCode.Bow);
+                if (e.Button == MouseButtons.Right)
+                    dolphin.DowngradeItem(ItemCode.Bow);
+            }
         }
     }
 }

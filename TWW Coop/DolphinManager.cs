@@ -108,6 +108,36 @@ namespace TWW_Coop
             toStream.BaseStream.Write(buffer, 0, buffer.Length);
         }
 
+        public void UpgradeItem(ItemCode code)
+        {
+            if (!toDolphin.IsConnected || !started)
+                return;
+
+            DolphinPacket upgradePacket = new DolphinPacket();
+            upgradePacket.type = PacketType.UpgradeItem;
+            byte[] codeBytes = BitConverter.GetBytes((int)code);
+            upgradePacket.data = new byte[4];
+            Array.Copy(codeBytes, upgradePacket.data, 4);
+            byte[] buffer = upgradePacket.Pack();
+
+            toStream.BaseStream.Write(buffer, 0, buffer.Length);
+        }
+
+        public void DowngradeItem(ItemCode code)
+        {
+            if (!toDolphin.IsConnected || !started)
+                return;
+
+            DolphinPacket downgradePacket = new DolphinPacket();
+            downgradePacket.type = PacketType.DowngradeItem;
+            byte[] codeBytes = BitConverter.GetBytes((int)code);
+            downgradePacket.data = new byte[4];
+            Array.Copy(codeBytes, downgradePacket.data, 4);
+            byte[] buffer = downgradePacket.Pack();
+
+            toStream.BaseStream.Write(buffer, 0, buffer.Length);
+        }
+
         private void ZeroReadBuffer()
         {
             for (int i = 0; i < readBuffer.Length; i++)
@@ -146,6 +176,10 @@ namespace TWW_Coop
         None = 0,
         PlayerStatusInfo = 1,
         WorldState = 2,
-        GiveItem = 3
+        GiveItem = 3,
+        GiveKeys = 4,
+        UpgradeItem = 5,
+        DowngradeItem = 6,
+        RevokeItem = 7
     }
 }

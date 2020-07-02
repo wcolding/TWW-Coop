@@ -229,4 +229,12 @@ namespace TWW_Coop
         TreasureChart40 = 1 << 63
     }
     
+    public enum ItemCode : int
+    {
+        PictoBox = 1,
+        Bow = 2,
+        Sword = 3,
+        Shield = 4,
+        Magic = 5
+    }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace TWW_Coop
 {
@@ -78,6 +79,7 @@ namespace TWW_Coop
             this.windGodsAriaPicture = new System.Windows.Forms.PictureBox();
             this.songOfPassingPicture = new System.Windows.Forms.PictureBox();
             this.walletPicture = new System.Windows.Forms.PictureBox();
+            this.trainerModeCheckbox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.magicPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.powerBraceletsPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skullHammerPicture)).BeginInit();
@@ -339,6 +341,7 @@ namespace TWW_Coop
             this.bowPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.bowPicture.TabIndex = 16;
             this.bowPicture.TabStop = false;
+            this.bowPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.bowPicture_Click);
             // 
             // baitBagPicture
             // 
@@ -469,7 +472,7 @@ namespace TWW_Coop
             this.telescopePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.telescopePicture.TabIndex = 3;
             this.telescopePicture.TabStop = false;
-            this.telescopePicture.Click += new System.EventHandler(this.telescopePicture_Click);
+            this.telescopePicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.telescopePicture_Click);
             // 
             // swordPicture
             // 
@@ -608,12 +611,24 @@ namespace TWW_Coop
             this.walletPicture.TabIndex = 47;
             this.walletPicture.TabStop = false;
             // 
+            // trainerModeCheckbox
+            // 
+            this.trainerModeCheckbox.AutoSize = true;
+            this.trainerModeCheckbox.Location = new System.Drawing.Point(214, 59);
+            this.trainerModeCheckbox.Name = "trainerModeCheckbox";
+            this.trainerModeCheckbox.Size = new System.Drawing.Size(89, 17);
+            this.trainerModeCheckbox.TabIndex = 48;
+            this.trainerModeCheckbox.Text = "Trainer Mode";
+            this.trainerModeCheckbox.UseVisualStyleBackColor = true;
+            this.trainerModeCheckbox.CheckedChanged += new System.EventHandler(this.trainerModeCheckbox_CheckedChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(913, 497);
+            this.Controls.Add(this.trainerModeCheckbox);
             this.Controls.Add(this.walletPicture);
             this.Controls.Add(this.songOfPassingPicture);
             this.Controls.Add(this.windGodsAriaPicture);
@@ -759,6 +774,7 @@ namespace TWW_Coop
         private System.Windows.Forms.PictureBox windGodsAriaPicture;
         private System.Windows.Forms.PictureBox songOfPassingPicture;
         private System.Windows.Forms.PictureBox walletPicture;
+        private System.Windows.Forms.CheckBox trainerModeCheckbox;
     }
 }
 
