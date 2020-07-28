@@ -138,6 +138,20 @@ namespace TWW_Coop
             toStream.BaseStream.Write(buffer, 0, buffer.Length);
         }
 
+        public void RevokeItem(WWItem item)
+        {
+            if (!toDolphin.IsConnected || !started)
+                return;
+
+            DolphinPacket revokePacket = new DolphinPacket();
+            revokePacket.type = PacketType.RevokeItem;
+            revokePacket.data = new byte[1];
+            revokePacket.data[0] = (byte)item;
+            byte[] buffer = revokePacket.Pack();
+
+            toStream.BaseStream.Write(buffer, 0, buffer.Length);
+        }
+
         private void ZeroReadBuffer()
         {
             for (int i = 0; i < readBuffer.Length; i++)
@@ -180,6 +194,10 @@ namespace TWW_Coop
         GiveKeys = 4,
         UpgradeItem = 5,
         DowngradeItem = 6,
-        RevokeItem = 7
+        RevokeItem = 7,
+        GiveSong = 8,
+        RemoveSong = 9,
+        GivePearl = 10,
+        RemovePearl = 11
     }
 }

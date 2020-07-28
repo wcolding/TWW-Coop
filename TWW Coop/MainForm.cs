@@ -22,6 +22,10 @@ namespace TWW_Coop
         private List<string> dolphinInQueue;
         private static bool trainermode = false;
 
+        private static PlayerStatus player;
+
+        private List<WWItem> upgradeItems = new List<WWItem>() { WWItem.PictoBox1, WWItem.PictoBox2, WWItem.Bow1, WWItem.Bow2, WWItem.Bow3, WWItem.Sword1, WWItem.Sword2, WWItem.Sword3, WWItem.Sword4, WWItem.Shield1, WWItem.Shield2 };
+
         public MainForm()
         {
             InitializeComponent();
@@ -66,7 +70,7 @@ namespace TWW_Coop
 
         private void DolphinListener(object sender, DoWorkEventArgs e)
         {
-            PlayerStatus player = new PlayerStatus();
+            player = new PlayerStatus();
             PlayerStatus old = new PlayerStatus();
             int playerSize = Marshal.SizeOf(player);
 
@@ -285,6 +289,14 @@ namespace TWW_Coop
                             skullHammerPicture.Image = TWW_Coop.Resources.item_SkullHammerN;
                     }
 
+                    if (player.inventory.bracelets != old.inventory.bracelets)
+                    {
+                        if (player.inventory.bracelets == (byte)WWItem.Bracelet)
+                            powerBraceletsPicture.Image = TWW_Coop.Resources.item_PowerBracelets;
+                        else
+                            powerBraceletsPicture.Image = TWW_Coop.Resources.item_PowerBraceletsN;
+                    }
+
                     if (player.inventory.shield != old.inventory.shield)
                     {
                         switch (player.inventory.shield)
@@ -464,12 +476,25 @@ namespace TWW_Coop
             }
         }
 
-        private void telescopePicture_Click(object sender, MouseEventArgs e)
+        private void ToggleItem(WWItem item, MouseEventArgs e)
         {
             if (trainermode)
             {
                 if (e.Button == MouseButtons.Left)
-                    dolphin.GiveItem(WWItem.Telecope);
+                    dolphin.GiveItem(item);
+                if (e.Button == MouseButtons.Right)
+                    dolphin.RevokeItem(item);
+            }
+        }
+
+        private void AdjustItem(ItemCode itemCode, MouseEventArgs e)
+        {
+            if (trainermode)
+            {
+                if (e.Button == MouseButtons.Left)
+                    dolphin.UpgradeItem(itemCode);
+                if (e.Button == MouseButtons.Right)
+                    dolphin.DowngradeItem(itemCode);
             }
         }
 
@@ -480,7 +505,11 @@ namespace TWW_Coop
 
         private void triforcePicture_Click(object sender, EventArgs e)
         {
-            
+            if (trainermode)
+            {
+                Trainer_Triforce triforceForm = new Trainer_Triforce(dolphin, player.questStatus.triforce);
+                triforceForm.ShowDialog();
+            }
         }
 
         private void ThreadSetText(Label label, string text)
@@ -504,15 +533,105 @@ namespace TWW_Coop
             trainermode = trainerModeCheckbox.Checked;
         }
 
+        #region Trainer Mode Toggles
+        private void telescopePicture_Click(object sender, MouseEventArgs e)
+        {
+            ToggleItem(WWItem.Telecope, e);
+        }
+
+        private void sailPicture_Click(object sender, MouseEventArgs e)
+        {
+            ToggleItem(WWItem.Sail, e);
+        }
+
+        private void wwPicture_Click(object sender, MouseEventArgs e)
+        {
+            ToggleItem(WWItem.WW, e);
+        }
+        private void grapplingHookPicture_Click(object sender, MouseEventArgs e)
+        {
+            ToggleItem(WWItem.GrapplingHook, e);
+        }
+
+        private void spoilsBagPicture_Click(object sender, MouseEventArgs e)
+        {
+            ToggleItem(WWItem.SpoilsBag, e);
+        }
+
+        private void boomerangPicture_Click(object sender, MouseEventArgs e)
+        {
+            ToggleItem(WWItem.Boomerang, e);
+        }
+
+        private void dekuLeafPicture_Click(object sender, MouseEventArgs e)
+        {
+            ToggleItem(WWItem.DekuLeaf, e);
+        }
+
+        private void tingleTunerPicture_Click(object sender, MouseEventArgs e)
+        {
+            ToggleItem(WWItem.TingleTuner, e);
+        }
+
+        private void pictoBoxPicture_Click(object sender, MouseEventArgs e)
+        {
+            AdjustItem(ItemCode.PictoBox, e);
+        }
+
+        private void ironBootsPicture_Click(object sender, MouseEventArgs e)
+        {
+            ToggleItem(WWItem.Boots, e);
+        }
+
+        private void magicArmorPicture_Click(object sender, MouseEventArgs e)
+        {
+            ToggleItem(WWItem.MagicArmor, e);
+        }
+
+        private void baitBagPicture_Click(object sender, MouseEventArgs e)
+        {
+            ToggleItem(WWItem.BaitBag, e);
+        }
+
         private void bowPicture_Click(object sender, MouseEventArgs e)
         {
-            if (trainermode)
-            {
-                if (e.Button == MouseButtons.Left)
-                    dolphin.UpgradeItem(ItemCode.Bow);
-                if (e.Button == MouseButtons.Right)
-                    dolphin.DowngradeItem(ItemCode.Bow);
-            }
+            AdjustItem(ItemCode.Bow, e);
         }
+
+        private void bombsPicture_Click(object sender, MouseEventArgs e)
+        {
+            ToggleItem(WWItem.Bombs, e);
+        }
+
+        private void magicPicture_Click(object sender, MouseEventArgs e)
+        {
+            AdjustItem(ItemCode.Magic, e);
+        }
+
+        private void hookshotPicture_Click(object sender, MouseEventArgs e)
+        {
+            ToggleItem(WWItem.Hookshot, e);
+        }
+
+        private void skullHammerPicture_Click(object sender, MouseEventArgs e)
+        {
+            ToggleItem(WWItem.Hammer, e);
+        }
+
+        private void powerBraceletsPicture_Click(object sender, MouseEventArgs e)
+        {
+            ToggleItem(WWItem.Bracelet, e);
+        }
+
+        private void swordPicture_Click(object sender, MouseEventArgs e)
+        {
+            AdjustItem(ItemCode.Sword, e);
+        }
+
+        private void shieldPicture_Click(object sender, MouseEventArgs e)
+        {
+            AdjustItem(ItemCode.Shield, e);
+        }
+        #endregion
     }
 }

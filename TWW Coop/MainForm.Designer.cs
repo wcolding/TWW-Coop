@@ -200,6 +200,7 @@ namespace TWW_Coop
             this.magicPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.magicPicture.TabIndex = 31;
             this.magicPicture.TabStop = false;
+            this.magicPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.magicPicture_Click);
             // 
             // powerBraceletsPicture
             // 
@@ -210,6 +211,7 @@ namespace TWW_Coop
             this.powerBraceletsPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.powerBraceletsPicture.TabIndex = 30;
             this.powerBraceletsPicture.TabStop = false;
+            this.powerBraceletsPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.powerBraceletsPicture_Click);
             // 
             // skullHammerPicture
             // 
@@ -220,6 +222,7 @@ namespace TWW_Coop
             this.skullHammerPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.skullHammerPicture.TabIndex = 29;
             this.skullHammerPicture.TabStop = false;
+            this.skullHammerPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.skullHammerPicture_Click);
             // 
             // hookshotPicture
             // 
@@ -230,6 +233,7 @@ namespace TWW_Coop
             this.hookshotPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.hookshotPicture.TabIndex = 28;
             this.hookshotPicture.TabStop = false;
+            this.hookshotPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.hookshotPicture_Click);
             // 
             // noteToMomPicture
             // 
@@ -331,6 +335,7 @@ namespace TWW_Coop
             this.bombsPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.bombsPicture.TabIndex = 17;
             this.bombsPicture.TabStop = false;
+            this.bombsPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.bombsPicture_Click);
             // 
             // bowPicture
             // 
@@ -352,6 +357,7 @@ namespace TWW_Coop
             this.baitBagPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.baitBagPicture.TabIndex = 15;
             this.baitBagPicture.TabStop = false;
+            this.baitBagPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.baitBagPicture_Click);
             // 
             // magicArmorPicture
             // 
@@ -362,6 +368,7 @@ namespace TWW_Coop
             this.magicArmorPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.magicArmorPicture.TabIndex = 14;
             this.magicArmorPicture.TabStop = false;
+            this.magicArmorPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.magicArmorPicture_Click);
             // 
             // ironBootsPicture
             // 
@@ -372,6 +379,7 @@ namespace TWW_Coop
             this.ironBootsPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.ironBootsPicture.TabIndex = 13;
             this.ironBootsPicture.TabStop = false;
+            this.ironBootsPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ironBootsPicture_Click);
             // 
             // pictoBoxPicture
             // 
@@ -382,6 +390,7 @@ namespace TWW_Coop
             this.pictoBoxPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictoBoxPicture.TabIndex = 12;
             this.pictoBoxPicture.TabStop = false;
+            this.pictoBoxPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictoBoxPicture_Click);
             // 
             // tingleTunerPicture
             // 
@@ -392,6 +401,7 @@ namespace TWW_Coop
             this.tingleTunerPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.tingleTunerPicture.TabIndex = 11;
             this.tingleTunerPicture.TabStop = false;
+            this.tingleTunerPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tingleTunerPicture_Click);
             // 
             // shieldPicture
             // 
@@ -402,6 +412,7 @@ namespace TWW_Coop
             this.shieldPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.shieldPicture.TabIndex = 10;
             this.shieldPicture.TabStop = false;
+            this.shieldPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.shieldPicture_Click);
             // 
             // dekuLeafPicture
             // 
@@ -412,6 +423,7 @@ namespace TWW_Coop
             this.dekuLeafPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.dekuLeafPicture.TabIndex = 9;
             this.dekuLeafPicture.TabStop = false;
+            this.dekuLeafPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dekuLeafPicture_Click);
             // 
             // boomerangPicture
             // 
@@ -422,6 +434,7 @@ namespace TWW_Coop
             this.boomerangPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.boomerangPicture.TabIndex = 8;
             this.boomerangPicture.TabStop = false;
+            this.boomerangPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.boomerangPicture_Click);
             // 
             // spoilsBagPicture
             // 
@@ -432,6 +445,7 @@ namespace TWW_Coop
             this.spoilsBagPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.spoilsBagPicture.TabIndex = 7;
             this.spoilsBagPicture.TabStop = false;
+            this.spoilsBagPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.spoilsBagPicture_Click);
             // 
             // grapplingHookPicture
             // 
@@ -442,6 +456,7 @@ namespace TWW_Coop
             this.grapplingHookPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.grapplingHookPicture.TabIndex = 6;
             this.grapplingHookPicture.TabStop = false;
+            this.grapplingHookPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.grapplingHookPicture_Click);
             // 
             // wwPicture
             // 
@@ -452,6 +467,7 @@ namespace TWW_Coop
             this.wwPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.wwPicture.TabIndex = 5;
             this.wwPicture.TabStop = false;
+            this.wwPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.wwPicture_Click);
             // 
             // sailPicture
             // 
@@ -462,6 +478,7 @@ namespace TWW_Coop
             this.sailPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.sailPicture.TabIndex = 4;
             this.sailPicture.TabStop = false;
+            this.sailPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.sailPicture_Click);
             // 
             // telescopePicture
             // 
@@ -484,6 +501,7 @@ namespace TWW_Coop
             this.swordPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.swordPicture.TabIndex = 2;
             this.swordPicture.TabStop = false;
+            this.swordPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.swordPicture_Click);
             // 
             // cabanaDeedPicture
             // 
