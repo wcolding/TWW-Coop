@@ -24,16 +24,25 @@ namespace TWW_Coop
         }
         private void triforceChecklist_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            byte newTriforce = 0;
-            System.Collections.IEnumerator triforceShards = triforceChecklist.CheckedIndices.GetEnumerator();
-            while (triforceShards.MoveNext() != false)
+            this.BeginInvoke(new Action(() =>
             {
-                int current = (int)triforceShards.Current;
-                newTriforce |= (byte)(1 << current);
-            }
+                byte newTriforce = 0;
 
-            //if (newTriforce != triforce)
-                //dolphin.SetTriforce(newTriforce);
+                for (int i = 0; i < 8; i++)
+                {
+                    if (triforceChecklist.GetItemChecked(i))
+                    {
+                        newTriforce |= (byte)(1 << i);
+                    }
+                }
+
+                if (newTriforce != (byte)triforce)
+                {
+                    dolphin.SetTriforce(newTriforce);
+                    triforce = (WWTriforceMask)newTriforce;
+                }
+            }));
+            
         }
 
         private void SetCheckboxesFromTriforce()

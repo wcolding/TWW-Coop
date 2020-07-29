@@ -152,6 +152,20 @@ namespace TWW_Coop
             toStream.BaseStream.Write(buffer, 0, buffer.Length);
         }
 
+        public void SetTriforce(byte mask)
+        {
+            if (!toDolphin.IsConnected || !started)
+                return;
+
+            DolphinPacket triforcePacket = new DolphinPacket();
+            triforcePacket.type = PacketType.SetTriforce;
+            triforcePacket.data = new byte[1];
+            triforcePacket.data[0] = mask;
+            byte[] buffer = triforcePacket.Pack();
+
+            toStream.BaseStream.Write(buffer, 0, buffer.Length);
+        }
+
         private void ZeroReadBuffer()
         {
             for (int i = 0; i < readBuffer.Length; i++)
@@ -198,6 +212,7 @@ namespace TWW_Coop
         GiveSong = 8,
         RemoveSong = 9,
         GivePearl = 10,
-        RemovePearl = 11
+        RemovePearl = 11,
+        SetTriforce = 12
     }
 }
