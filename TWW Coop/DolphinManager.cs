@@ -18,9 +18,9 @@ namespace TWW_Coop
     public class DolphinManager
     {
 
-        private readonly int PLAYER_STATUS_SIZE = 79;
-        private readonly int WORLD_STATE_SIZE = 562;
-        private readonly int GIVE_ITEM_SIZE = 5;
+        public static readonly int PLAYER_STATUS_SIZE = 79;
+        public static readonly int WORLD_STATE_SIZE = 562;
+        public static readonly int GIVE_ITEM_SIZE = 5;
 
         private Process process;
         private bool started = false;
@@ -95,83 +95,56 @@ namespace TWW_Coop
             return thisPacket;
         }
 
-        public void GiveItem(WWItem item)
+        public void WritePacket(DolphinPacket packet)
         {
             if (!toDolphin.IsConnected || !started)
                 return;
 
-            DolphinPacket givePacket = new DolphinPacket();
-            givePacket.type = PacketType.GiveItem;
-            givePacket.data[0] = (byte)item;
-            byte[] buffer = givePacket.Pack();
-
+            byte[] buffer = packet.Pack();
             toStream.BaseStream.Write(buffer, 0, buffer.Length);
+        }
+
+        public void GiveItem(WWItem item)
+        {
+            DolphinPacket givePacket = new DolphinPacket(PacketType.GiveItem);
+            givePacket.data[0] = (byte)item;
+            WritePacket(givePacket);
         }
 
         public void UpgradeItem(ItemCode code)
         {
-            if (!toDolphin.IsConnected || !started)
-                return;
-
-            DolphinPacket upgradePacket = new DolphinPacket();
-            upgradePacket.type = PacketType.UpgradeItem;
+            DolphinPacket upgradePacket = new DolphinPacket(PacketType.UpgradeItem);
             byte[] codeBytes = BitConverter.GetBytes((int)code);
-            upgradePacket.data = new byte[4];
             Array.Copy(codeBytes, upgradePacket.data, 4);
-            byte[] buffer = upgradePacket.Pack();
-
-            toStream.BaseStream.Write(buffer, 0, buffer.Length);
+            WritePacket(upgradePacket);
         }
 
         public void DowngradeItem(ItemCode code)
         {
-            if (!toDolphin.IsConnected || !started)
-                return;
-
-            DolphinPacket downgradePacket = new DolphinPacket();
-            downgradePacket.type = PacketType.DowngradeItem;
+            DolphinPacket downgradePacket = new DolphinPacket(PacketType.DowngradeItem);
             byte[] codeBytes = BitConverter.GetBytes((int)code);
-            downgradePacket.data = new byte[4];
             Array.Copy(codeBytes, downgradePacket.data, 4);
-            byte[] buffer = downgradePacket.Pack();
-
-            toStream.BaseStream.Write(buffer, 0, buffer.Length);
+            WritePacket(downgradePacket);
         }
 
         public void RevokeItem(WWItem item)
         {
-            if (!toDolphin.IsConnected || !started)
-                return;
-
-            DolphinPacket revokePacket = new DolphinPacket();
-            revokePacket.type = PacketType.RevokeItem;
-            revokePacket.data = new byte[1];
+            DolphinPacket revokePacket = new DolphinPacket(PacketType.RevokeItem);
             revokePacket.data[0] = (byte)item;
-            byte[] buffer = revokePacket.Pack();
-
-            toStream.BaseStream.Write(buffer, 0, buffer.Length);
+            WritePacket(revokePacket);
         }
 
         public void SetTriforce(byte mask)
         {
-            if (!toDolphin.IsConnected || !started)
-                return;
-
-            DolphinPacket triforcePacket = new DolphinPacket();
-            triforcePacket.type = PacketType.SetTriforce;
-            triforcePacket.data = new byte[1];
+            DolphinPacket triforcePacket = new DolphinPacket(PacketType.SetTriforce);
             triforcePacket.data[0] = mask;
-            byte[] buffer = triforcePacket.Pack();
-
-            toStream.BaseStream.Write(buffer, 0, buffer.Length);
+            WritePacket(triforcePacket);
         }
 
         private void ZeroReadBuffer()
         {
             for (int i = 0; i < readBuffer.Length; i++)
-            {
                 readBuffer[i] = 0;
-            }
         }
     }
 
@@ -185,6 +158,33 @@ namespace TWW_Coop
             type = PacketType.None;
             data = new byte[1];
             data[0] = 0;
+        }
+
+        public DolphinPacket(PacketType packetType)
+        {
+            type = packetType;
+
+            int dataSize = 1;
+
+            switch (type)
+            {
+                case PacketType.PlayerStatusInfo:
+                    dataSize = DolphinManager.PLAYER_STATUS_SIZE;
+                    break;
+                case PacketType.WorldState:
+                    dataSize = DolphinManager.WORLD_STATE_SIZE;
+                    break;
+                case PacketType.UpgradeItem:
+                    dataSize = 4;
+                    break;
+                case PacketType.DowngradeItem:
+                    dataSize = 4;
+                    break;
+                default:
+                    break;
+            }
+
+            data = new byte[dataSize];
         }
 
         public byte[] Pack()
