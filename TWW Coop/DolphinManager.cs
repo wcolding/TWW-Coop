@@ -141,6 +141,14 @@ namespace TWW_Coop
             WritePacket(triforcePacket);
         }
 
+        public void AddKeys(short keys)
+        {
+            DolphinPacket keysPacket = new DolphinPacket(PacketType.GiveKeys);
+            byte[] keyBytes = BitConverter.GetBytes(keys);
+            Array.Copy(keyBytes, keysPacket.data, 2);
+            WritePacket(keysPacket);
+        }
+
         private void ZeroReadBuffer()
         {
             for (int i = 0; i < readBuffer.Length; i++)
@@ -179,6 +187,9 @@ namespace TWW_Coop
                     break;
                 case PacketType.DowngradeItem:
                     dataSize = 4;
+                    break;
+                case PacketType.GiveKeys:
+                    dataSize = 2;
                     break;
                 default:
                     break;
