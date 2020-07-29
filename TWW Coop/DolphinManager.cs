@@ -141,6 +141,34 @@ namespace TWW_Coop
             WritePacket(triforcePacket);
         }
 
+        public void AddPearl(WWPearlMask pearl)
+        {
+            DolphinPacket pearlPacket = new DolphinPacket(PacketType.GivePearl);
+            pearlPacket.data[0] = (byte)pearl;
+            WritePacket(pearlPacket);
+        }
+
+        public void RemovePearl(WWPearlMask pearl)
+        {
+            DolphinPacket pearlPacket = new DolphinPacket(PacketType.RemovePearl);
+            pearlPacket.data[0] = (byte)pearl;
+            WritePacket(pearlPacket);
+        }
+
+        public void AddSong(WWSongMask song)
+        {
+            DolphinPacket songPacket = new DolphinPacket(PacketType.GiveSong);
+            songPacket.data[0] = (byte)song;
+            WritePacket(songPacket);
+        }
+
+        public void RemoveSong(WWSongMask song)
+        {
+            DolphinPacket songPacket = new DolphinPacket(PacketType.RemoveSong);
+            songPacket.data[0] = (byte)song;
+            WritePacket(songPacket);
+        }
+
         public void AddKeys(short keys)
         {
             DolphinPacket keysPacket = new DolphinPacket(PacketType.GiveKeys);

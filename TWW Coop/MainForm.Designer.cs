@@ -306,6 +306,7 @@ namespace TWW_Coop
             this.farorePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.farorePicture.TabIndex = 20;
             this.farorePicture.TabStop = false;
+            this.farorePicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.farorePicture_Click);
             // 
             // dinPicture
             // 
@@ -316,6 +317,7 @@ namespace TWW_Coop
             this.dinPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.dinPicture.TabIndex = 19;
             this.dinPicture.TabStop = false;
+            this.dinPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dinPicture_Click);
             // 
             // nayruPicture
             // 
@@ -326,6 +328,7 @@ namespace TWW_Coop
             this.nayruPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.nayruPicture.TabIndex = 18;
             this.nayruPicture.TabStop = false;
+            this.nayruPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.nayruPicture_Click);
             // 
             // bombsPicture
             // 
@@ -569,6 +572,7 @@ namespace TWW_Coop
             this.windsRequiemPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.windsRequiemPicture.TabIndex = 41;
             this.windsRequiemPicture.TabStop = false;
+            this.windsRequiemPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.windsRequiemPicture_Click);
             // 
             // balladOfGalesPicture
             // 
@@ -579,6 +583,7 @@ namespace TWW_Coop
             this.balladOfGalesPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.balladOfGalesPicture.TabIndex = 42;
             this.balladOfGalesPicture.TabStop = false;
+            this.balladOfGalesPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.balladOfGalesPicture_Click);
             // 
             // commandMelodyPicture
             // 
@@ -589,6 +594,7 @@ namespace TWW_Coop
             this.commandMelodyPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.commandMelodyPicture.TabIndex = 43;
             this.commandMelodyPicture.TabStop = false;
+            this.commandMelodyPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.commandMelodyPicture_Click);
             // 
             // earthGodsLyricPicture
             // 
@@ -599,6 +605,7 @@ namespace TWW_Coop
             this.earthGodsLyricPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.earthGodsLyricPicture.TabIndex = 44;
             this.earthGodsLyricPicture.TabStop = false;
+            this.earthGodsLyricPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.earthGodsLyricPicture_Click);
             // 
             // windGodsAriaPicture
             // 
@@ -609,6 +616,7 @@ namespace TWW_Coop
             this.windGodsAriaPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.windGodsAriaPicture.TabIndex = 45;
             this.windGodsAriaPicture.TabStop = false;
+            this.windGodsAriaPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.windGodsAriaPicture_Click);
             // 
             // songOfPassingPicture
             // 
@@ -619,6 +627,7 @@ namespace TWW_Coop
             this.songOfPassingPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.songOfPassingPicture.TabIndex = 46;
             this.songOfPassingPicture.TabStop = false;
+            this.songOfPassingPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.songOfPassingPicture_Click);
             // 
             // walletPicture
             // 

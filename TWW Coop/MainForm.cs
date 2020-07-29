@@ -498,6 +498,28 @@ namespace TWW_Coop
             }
         }
 
+        private void TogglePearl(WWPearlMask pearl, MouseEventArgs e)
+        {
+            if (trainermode)
+            {
+                if (e.Button == MouseButtons.Left)
+                    dolphin.AddPearl(pearl);
+                if (e.Button == MouseButtons.Right)
+                    dolphin.RemovePearl(pearl);
+            }
+        }
+
+        private void ToggleSong(WWSongMask song, MouseEventArgs e)
+        {
+            if (trainermode)
+            {
+                if (e.Button == MouseButtons.Left)
+                    dolphin.AddSong(song);
+                if (e.Button == MouseButtons.Right)
+                    dolphin.RemoveSong(song);
+            }
+        }
+
         private void testButton_Click(object sender, EventArgs e)
         {
             dolphin.GiveItem(WWItem.PictoBox2);
@@ -637,7 +659,52 @@ namespace TWW_Coop
         {
             AdjustItem(ItemCode.Shield, e);
         }
-        #endregion
 
+        private void dinPicture_Click(object sender, MouseEventArgs e)
+        {
+            TogglePearl(WWPearlMask.Din, e);
+        }
+
+        private void farorePicture_Click(object sender, MouseEventArgs e)
+        {
+            TogglePearl(WWPearlMask.Farore, e);
+        }
+
+        private void nayruPicture_Click(object sender, MouseEventArgs e)
+        {
+            TogglePearl(WWPearlMask.Nayru, e);
+        }
+
+        private void windsRequiemPicture_Click(object sender, MouseEventArgs e)
+        {
+            ToggleSong(WWSongMask.WindsRequiem, e);
+        }
+
+        private void balladOfGalesPicture_Click(object sender, MouseEventArgs e)
+        {
+            ToggleSong(WWSongMask.BalladofGales, e);
+        }
+
+        private void commandMelodyPicture_Click(object sender, MouseEventArgs e)
+        {
+            ToggleSong(WWSongMask.CommandMelody, e);
+        }
+
+        private void earthGodsLyricPicture_Click(object sender, MouseEventArgs e)
+        {
+            ToggleSong(WWSongMask.EarthGodsLyric, e);
+        }
+
+        private void windGodsAriaPicture_Click(object sender, MouseEventArgs e)
+        {
+            ToggleSong(WWSongMask.WindGodsAria, e);
+        }
+
+        private void songOfPassingPicture_Click(object sender, MouseEventArgs e)
+        {
+            ToggleSong(WWSongMask.SongofPassing, e);
+        }
+
+        #endregion
     }
 }
