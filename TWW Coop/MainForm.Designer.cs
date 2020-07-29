@@ -284,6 +284,7 @@ namespace TWW_Coop
             this.deliveryBagPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.deliveryBagPicture.TabIndex = 23;
             this.deliveryBagPicture.TabStop = false;
+            this.deliveryBagPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.deliveryBagPicture_Click);
             // 
             // triforcePicture
             // 

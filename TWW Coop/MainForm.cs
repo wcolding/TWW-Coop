@@ -608,6 +608,11 @@ namespace TWW_Coop
             AdjustItem(ItemCode.Magic, e);
         }
 
+        private void deliveryBagPicture_Click(object sender, MouseEventArgs e)
+        {
+            ToggleItem(WWItem.MailBag, e);
+        }
+
         private void hookshotPicture_Click(object sender, MouseEventArgs e)
         {
             ToggleItem(WWItem.Hookshot, e);
@@ -633,5 +638,6 @@ namespace TWW_Coop
             AdjustItem(ItemCode.Shield, e);
         }
         #endregion
+
     }
 }
