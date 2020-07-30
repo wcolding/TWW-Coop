@@ -522,7 +522,7 @@ namespace TWW_Coop
 
         private void testButton_Click(object sender, EventArgs e)
         {
-            dolphin.GiveItem(WWItem.PictoBox2);
+            dolphin.GiveItem(WWItem.HurricaneSpin);
         }
 
         private void triforcePicture_Click(object sender, EventArgs e)
@@ -720,8 +720,16 @@ namespace TWW_Coop
             AdjustItem(ItemCode.BombCapacity, e);
         }
 
+
         #endregion
 
-
+        private void tingleStatuePicture_Click(object sender, EventArgs e)
+        {
+            if (trainermode)
+            {
+                Trainer_Statues statueForm = new Trainer_Statues(dolphin, player.questStatus.statues);
+                statueForm.ShowDialog();
+            }
+        }
     }
 }

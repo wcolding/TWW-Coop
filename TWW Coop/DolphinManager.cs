@@ -169,6 +169,13 @@ namespace TWW_Coop
             WritePacket(songPacket);
         }
 
+        public void SetStatues(byte mask)
+        {
+            DolphinPacket statuePacket = new DolphinPacket(PacketType.SetStatues);
+            statuePacket.data[0] = mask;
+            WritePacket(statuePacket);
+        }
+
         public void AddKeys(short keys)
         {
             DolphinPacket keysPacket = new DolphinPacket(PacketType.GiveKeys);
@@ -252,6 +259,8 @@ namespace TWW_Coop
         RemoveSong = 9,
         GivePearl = 10,
         RemovePearl = 11,
-        SetTriforce = 12
+        SetTriforce = 12,
+        SetStatues = 13,
+        SetBottles = 14
     }
 }

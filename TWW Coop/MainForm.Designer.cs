@@ -150,7 +150,7 @@ namespace TWW_Coop
             this.testButton.Name = "testButton";
             this.testButton.Size = new System.Drawing.Size(150, 41);
             this.testButton.TabIndex = 21;
-            this.testButton.Text = "Give Picto2";
+            this.testButton.Text = "Give Hurricane Spin";
             this.testButton.UseVisualStyleBackColor = true;
             this.testButton.Click += new System.EventHandler(this.testButton_Click);
             // 
@@ -538,6 +538,7 @@ namespace TWW_Coop
             this.tingleStatuePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.tingleStatuePicture.TabIndex = 39;
             this.tingleStatuePicture.TabStop = false;
+            this.tingleStatuePicture.Click += new System.EventHandler(this.tingleStatuePicture_Click);
             // 
             // bottleCounter
             // 
