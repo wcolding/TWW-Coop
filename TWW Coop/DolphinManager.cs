@@ -176,6 +176,15 @@ namespace TWW_Coop
             WritePacket(statuePacket);
         }
 
+        public void SetBottleSlot(int slot, byte value)
+        {
+            DolphinPacket bottlePacket = new DolphinPacket(PacketType.SetBottles);
+            byte[] slotBytes = BitConverter.GetBytes(slot);
+            Array.Copy(slotBytes, bottlePacket.data, 4);
+            bottlePacket.data[4] = value;
+            WritePacket(bottlePacket);
+        }
+
         public void AddKeys(short keys)
         {
             DolphinPacket keysPacket = new DolphinPacket(PacketType.GiveKeys);
@@ -225,6 +234,9 @@ namespace TWW_Coop
                     break;
                 case PacketType.GiveKeys:
                     dataSize = 2;
+                    break;
+                case PacketType.SetBottles:
+                    dataSize = 5;
                     break;
                 default:
                     break;

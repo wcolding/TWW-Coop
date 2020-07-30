@@ -276,6 +276,7 @@ namespace TWW_Coop
             this.bottlePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.bottlePicture.TabIndex = 24;
             this.bottlePicture.TabStop = false;
+            this.bottlePicture.Click += new System.EventHandler(this.bottlePicture_Click);
             // 
             // deliveryBagPicture
             // 

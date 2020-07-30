@@ -265,6 +265,27 @@ namespace TWW_Coop
                         ThreadSetText(bombCapacity, player.ammo.bombCapacity.ToString());
                     }
 
+                    // Bottle counter
+                    if ((player.inventory.bottle1 != old.inventory.bottle1) || (player.inventory.bottle2 != old.inventory.bottle2) || (player.inventory.bottle3 != old.inventory.bottle3) || (player.inventory.bottle4 != old.inventory.bottle4))
+                    {
+                        int bottleCount = 0;
+                        if (player.inventory.bottle1 != (byte)WWBottleContents.NoBottle)
+                            bottleCount++;
+                        if (player.inventory.bottle2 != (byte)WWBottleContents.NoBottle)
+                            bottleCount++;
+                        if (player.inventory.bottle3 != (byte)WWBottleContents.NoBottle)
+                            bottleCount++;
+                        if (player.inventory.bottle4 != (byte)WWBottleContents.NoBottle)
+                            bottleCount++;
+
+                        ThreadSetText(bottleCounter, bottleCount.ToString());
+
+                        if (bottleCount > 0)
+                            bottlePicture.Image = TWW_Coop.Resources.item_Bottle;
+                        else
+                            bottlePicture.Image = TWW_Coop.Resources.item_BottleN;
+                    }
+
                     if (player.inventory.deliveryBag != old.inventory.deliveryBag)
                     {
                         if (player.inventory.deliveryBag == (byte)WWItem.MailBag)
@@ -729,6 +750,15 @@ namespace TWW_Coop
             {
                 Trainer_Statues statueForm = new Trainer_Statues(dolphin, player.questStatus.statues);
                 statueForm.ShowDialog();
+            }
+        }
+
+        private void bottlePicture_Click(object sender, EventArgs e)
+        {
+            if (trainermode)
+            {
+                Trainer_Bottles bottleForm = new Trainer_Bottles(dolphin, player.inventory.bottle1, player.inventory.bottle2, player.inventory.bottle3, player.inventory.bottle4);
+                bottleForm.ShowDialog();
             }
         }
     }

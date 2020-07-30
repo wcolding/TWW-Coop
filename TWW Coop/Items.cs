@@ -97,6 +97,7 @@ namespace TWW_Coop
 
     public enum WWBottleContents : byte
     {
+        NoBottle    = 0xFF,
         Empty       = 0x50,
         RedPotion   = 0x51,
         GreenPotion = 0x52,
