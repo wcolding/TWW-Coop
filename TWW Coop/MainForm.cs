@@ -707,13 +707,17 @@ namespace TWW_Coop
 
         private void walletPicture_Click(object sender, MouseEventArgs e)
         {
-            if (trainermode)
-            {
-                if (e.Button == MouseButtons.Left)
-                    dolphin.UpgradeItem(ItemCode.Wallet);
-                if (e.Button == MouseButtons.Right)
-                    dolphin.DowngradeItem(ItemCode.Wallet);
-            }
+            AdjustItem(ItemCode.Wallet, e);
+        }
+
+        private void bowCapacity_Click(object sender, MouseEventArgs e)
+        {
+            AdjustItem(ItemCode.BowCapacity, e);
+        }
+
+        private void bombCapacity_Click(object sender, MouseEventArgs e)
+        {
+            AdjustItem(ItemCode.BombCapacity, e);
         }
 
         #endregion

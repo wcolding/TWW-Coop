@@ -176,6 +176,7 @@ namespace TWW_Coop
             this.bowCapacity.TabIndex = 35;
             this.bowCapacity.Text = "30";
             this.bowCapacity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bowCapacity.MouseClick += new System.Windows.Forms.MouseEventHandler(this.bowCapacity_Click);
             // 
             // bombCapacity
             // 
@@ -189,6 +190,7 @@ namespace TWW_Coop
             this.bombCapacity.TabIndex = 36;
             this.bombCapacity.Text = "30";
             this.bombCapacity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bombCapacity.MouseClick += new System.Windows.Forms.MouseEventHandler(this.bombCapacity_Click);
             // 
             // magicPicture
             // 
