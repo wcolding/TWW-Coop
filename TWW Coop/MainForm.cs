@@ -705,6 +705,19 @@ namespace TWW_Coop
             ToggleSong(WWSongMask.SongofPassing, e);
         }
 
+        private void walletPicture_Click(object sender, MouseEventArgs e)
+        {
+            if (trainermode)
+            {
+                if (e.Button == MouseButtons.Left)
+                    dolphin.UpgradeItem(ItemCode.Wallet);
+                if (e.Button == MouseButtons.Right)
+                    dolphin.DowngradeItem(ItemCode.Wallet);
+            }
+        }
+
         #endregion
+
+
     }
 }

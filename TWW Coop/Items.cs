@@ -235,6 +235,7 @@ namespace TWW_Coop
         Bow = 2,
         Sword = 3,
         Shield = 4,
-        Magic = 5
+        Magic = 5,
+        Wallet = 6
     }
 }

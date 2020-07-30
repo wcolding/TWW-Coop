@@ -638,6 +638,7 @@ namespace TWW_Coop
             this.walletPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.walletPicture.TabIndex = 47;
             this.walletPicture.TabStop = false;
+            this.walletPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.walletPicture_Click);
             // 
             // trainerModeCheckbox
             // 
