@@ -403,9 +403,12 @@ namespace TWW_Coop
                             songOfPassingPicture.Image = TWW_Coop.Resources.item_WindWakerN;
                     }
 
-                    if (player.questStatus.charts.HasFlag(WWChartMask.GhostShipChart))
+                    if (player.questStatus.charts != old.questStatus.charts)
                     {
-                        ghostShipChartPicture.Image = TWW_Coop.Resources.item_GhostShipChart;
+                        if (player.questStatus.charts.HasFlag(WWChartMask.GhostShipChart))
+                            ghostShipChartPicture.Image = TWW_Coop.Resources.item_GhostShipChart;
+                        else
+                            ghostShipChartPicture.Image = TWW_Coop.Resources.item_GhostShipChartN;
                     }
 
                     if (player.status.maxMagic != old.status.maxMagic)
@@ -551,7 +554,7 @@ namespace TWW_Coop
 
         private void testButton_Click(object sender, EventArgs e)
         {
-            dolphin.GiveItem(WWItem.HurricaneSpin);
+            dolphin.GiveChart(WWChartMask.TinglesChart);
         }
 
         private void triforcePicture_Click(object sender, EventArgs e)
@@ -772,6 +775,15 @@ namespace TWW_Coop
             {
                 Trainer_Bottles bottleForm = new Trainer_Bottles(dolphin, player.inventory.bottle1, player.inventory.bottle2, player.inventory.bottle3, player.inventory.bottle4);
                 bottleForm.ShowDialog();
+            }
+        }
+
+        private void ghostShipChartPicture_Click(object sender, EventArgs e)
+        {
+            if (trainermode)
+            {
+                Trainer_Charts chartsForm = new Trainer_Charts(dolphin, player.questStatus.charts);
+                chartsForm.ShowDialog();
             }
         }
     }

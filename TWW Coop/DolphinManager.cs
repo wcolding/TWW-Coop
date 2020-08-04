@@ -184,6 +184,21 @@ namespace TWW_Coop
             bottlePacket.data[4] = value;
             WritePacket(bottlePacket);
         }
+        public void GiveChart(WWChartMask charts)
+        {
+            DolphinPacket chartPacket = new DolphinPacket(PacketType.GiveChart);
+            byte[] chartBytes = BitConverter.GetBytes((long)charts);
+            Array.Copy(chartBytes, chartPacket.data, 8);
+            WritePacket(chartPacket);
+        }
+
+        public void RemoveChart(WWChartMask charts)
+        {
+            DolphinPacket chartPacket = new DolphinPacket(PacketType.RemoveChart);
+            byte[] chartBytes = BitConverter.GetBytes((long)charts);
+            Array.Copy(chartBytes, chartPacket.data, 8);
+            WritePacket(chartPacket);
+        }
 
         public void AddKeys(short keys)
         {
@@ -238,6 +253,12 @@ namespace TWW_Coop
                 case PacketType.SetBottles:
                     dataSize = 5;
                     break;
+                case PacketType.GiveChart:
+                    dataSize = 8;
+                    break;
+                case PacketType.RemoveChart:
+                    dataSize = 8;
+                    break;
                 default:
                     break;
             }
@@ -273,6 +294,8 @@ namespace TWW_Coop
         RemovePearl = 11,
         SetTriforce = 12,
         SetStatues = 13,
-        SetBottles = 14
+        SetBottles = 14,
+        GiveChart = 15,
+        RemoveChart = 16
     }
 }

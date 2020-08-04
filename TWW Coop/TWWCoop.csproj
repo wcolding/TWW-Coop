@@ -67,6 +67,12 @@
     <Compile Include="Trainer_Bottles.Designer.cs">
       <DependentUpon>Trainer_Bottles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Trainer_Charts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trainer_Charts.Designer.cs">
+      <DependentUpon>Trainer_Charts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Trainer_Statues.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </Compile>
     <EmbeddedResource Include="Trainer_Bottles.resx">
       <DependentUpon>Trainer_Bottles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trainer_Charts.resx">
+      <DependentUpon>Trainer_Charts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Trainer_Statues.resx">
       <DependentUpon>Trainer_Statues.cs</DependentUpon>

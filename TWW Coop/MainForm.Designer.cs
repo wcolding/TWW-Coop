@@ -152,7 +152,7 @@ namespace TWW_Coop
             this.testButton.Name = "testButton";
             this.testButton.Size = new System.Drawing.Size(150, 41);
             this.testButton.TabIndex = 21;
-            this.testButton.Text = "Give Hurricane Spin";
+            this.testButton.Text = "Give Ghost Chart";
             this.testButton.UseVisualStyleBackColor = true;
             this.testButton.Click += new System.EventHandler(this.testButton_Click);
             // 
@@ -340,6 +340,7 @@ namespace TWW_Coop
             this.ghostShipChartPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.ghostShipChartPicture.TabIndex = 38;
             this.ghostShipChartPicture.TabStop = false;
+            this.ghostShipChartPicture.Click += new System.EventHandler(this.ghostShipChartPicture_Click);
             // 
             // cabanaDeedPicture
             // 
