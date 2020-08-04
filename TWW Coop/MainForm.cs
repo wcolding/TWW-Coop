@@ -334,6 +334,14 @@ namespace TWW_Coop
                         }
                     }
 
+                    if (player.inventory.spinAttack != old.inventory.spinAttack)
+                    {
+                        if (player.inventory.spinAttack == (byte)0x01)
+                            hurricaneSpinPicture.Image = TWW_Coop.Resources.item_HurricaneSpin;
+                        else
+                            hurricaneSpinPicture.Image = TWW_Coop.Resources.item_HurricaneSpinN;
+                    }
+
                     if (player.questStatus.triforce != old.questStatus.triforce)
                     {
                         ThreadSetText(triforceCounter, player.questStatus.GetTriforceCount().ToString());
@@ -739,6 +747,11 @@ namespace TWW_Coop
         private void bombCapacity_Click(object sender, MouseEventArgs e)
         {
             AdjustItem(ItemCode.BombCapacity, e);
+        }
+
+        private void hurricaneSpinPicture_Click(object sender, MouseEventArgs e)
+        {
+            ToggleItem(WWItem.HurricaneSpin, e);
         }
 
 

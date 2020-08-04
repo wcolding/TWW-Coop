@@ -453,6 +453,26 @@ namespace TWW_Coop {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap item_HurricaneSpin {
+            get {
+                object obj = ResourceManager.GetObject("item_HurricaneSpin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap item_HurricaneSpinN {
+            get {
+                object obj = ResourceManager.GetObject("item_HurricaneSpinN", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap item_IronBoots {
             get {
                 object obj = ResourceManager.GetObject("item_IronBoots", resourceCulture);

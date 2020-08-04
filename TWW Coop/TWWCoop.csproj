@@ -159,6 +159,8 @@
     <Content Include="Icons\item_GrapplingHookN.png" />
     <Content Include="Icons\item_Hookshot.png" />
     <Content Include="Icons\item_HookshotN.png" />
+    <None Include="Icons\item_HurricaneSpin.png" />
+    <None Include="Icons\item_HurricaneSpinN.png" />
     <Content Include="Icons\item_IronBoots.png" />
     <Content Include="Icons\item_IronBootsN.png" />
     <Content Include="Icons\item_MagicArmor.png" />
@@ -200,6 +202,7 @@
     <None Include="Icons\number_30.png" />
     <None Include="Icons\number_60.png" />
     <None Include="Icons\number_99.png" />
+    <None Include="Icons\orca_head.png" />
     <Content Include="Icons\pearl_Din.png" />
     <Content Include="Icons\pearl_DinN.png" />
     <Content Include="Icons\pearl_Farore.png" />

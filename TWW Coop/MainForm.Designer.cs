@@ -38,6 +38,20 @@ namespace TWW_Coop
             this.triforceCounter = new System.Windows.Forms.Label();
             this.bowCapacity = new System.Windows.Forms.Label();
             this.bombCapacity = new System.Windows.Forms.Label();
+            this.bottleCounter = new System.Windows.Forms.Label();
+            this.tingleCounter = new System.Windows.Forms.Label();
+            this.trainerModeCheckbox = new System.Windows.Forms.CheckBox();
+            this.hurricaneSpinPicture = new System.Windows.Forms.PictureBox();
+            this.walletPicture = new System.Windows.Forms.PictureBox();
+            this.songOfPassingPicture = new System.Windows.Forms.PictureBox();
+            this.windGodsAriaPicture = new System.Windows.Forms.PictureBox();
+            this.earthGodsLyricPicture = new System.Windows.Forms.PictureBox();
+            this.commandMelodyPicture = new System.Windows.Forms.PictureBox();
+            this.balladOfGalesPicture = new System.Windows.Forms.PictureBox();
+            this.windsRequiemPicture = new System.Windows.Forms.PictureBox();
+            this.tingleStatuePicture = new System.Windows.Forms.PictureBox();
+            this.ghostShipChartPicture = new System.Windows.Forms.PictureBox();
+            this.cabanaDeedPicture = new System.Windows.Forms.PictureBox();
             this.magicPicture = new System.Windows.Forms.PictureBox();
             this.powerBraceletsPicture = new System.Windows.Forms.PictureBox();
             this.skullHammerPicture = new System.Windows.Forms.PictureBox();
@@ -67,19 +81,17 @@ namespace TWW_Coop
             this.sailPicture = new System.Windows.Forms.PictureBox();
             this.telescopePicture = new System.Windows.Forms.PictureBox();
             this.swordPicture = new System.Windows.Forms.PictureBox();
-            this.cabanaDeedPicture = new System.Windows.Forms.PictureBox();
-            this.ghostShipChartPicture = new System.Windows.Forms.PictureBox();
-            this.tingleStatuePicture = new System.Windows.Forms.PictureBox();
-            this.bottleCounter = new System.Windows.Forms.Label();
-            this.tingleCounter = new System.Windows.Forms.Label();
-            this.windsRequiemPicture = new System.Windows.Forms.PictureBox();
-            this.balladOfGalesPicture = new System.Windows.Forms.PictureBox();
-            this.commandMelodyPicture = new System.Windows.Forms.PictureBox();
-            this.earthGodsLyricPicture = new System.Windows.Forms.PictureBox();
-            this.windGodsAriaPicture = new System.Windows.Forms.PictureBox();
-            this.songOfPassingPicture = new System.Windows.Forms.PictureBox();
-            this.walletPicture = new System.Windows.Forms.PictureBox();
-            this.trainerModeCheckbox = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.hurricaneSpinPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walletPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.songOfPassingPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.windGodsAriaPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.earthGodsLyricPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commandMelodyPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.balladOfGalesPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.windsRequiemPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tingleStatuePicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ghostShipChartPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cabanaDeedPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.magicPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.powerBraceletsPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skullHammerPicture)).BeginInit();
@@ -109,16 +121,6 @@ namespace TWW_Coop
             ((System.ComponentModel.ISupportInitialize)(this.sailPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.telescopePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.swordPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cabanaDeedPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ghostShipChartPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tingleStatuePicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.windsRequiemPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.balladOfGalesPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commandMelodyPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.earthGodsLyricPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.windGodsAriaPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.songOfPassingPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.walletPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // modeBox
@@ -191,6 +193,163 @@ namespace TWW_Coop
             this.bombCapacity.Text = "30";
             this.bombCapacity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bombCapacity.MouseClick += new System.Windows.Forms.MouseEventHandler(this.bombCapacity_Click);
+            // 
+            // bottleCounter
+            // 
+            this.bottleCounter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bottleCounter.AutoSize = true;
+            this.bottleCounter.BackColor = System.Drawing.Color.White;
+            this.bottleCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bottleCounter.Location = new System.Drawing.Point(519, 240);
+            this.bottleCounter.Name = "bottleCounter";
+            this.bottleCounter.Size = new System.Drawing.Size(16, 16);
+            this.bottleCounter.TabIndex = 34;
+            this.bottleCounter.Text = "0";
+            this.bottleCounter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tingleCounter
+            // 
+            this.tingleCounter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.tingleCounter.AutoSize = true;
+            this.tingleCounter.BackColor = System.Drawing.Color.White;
+            this.tingleCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tingleCounter.Location = new System.Drawing.Point(690, 328);
+            this.tingleCounter.Name = "tingleCounter";
+            this.tingleCounter.Size = new System.Drawing.Size(16, 16);
+            this.tingleCounter.TabIndex = 40;
+            this.tingleCounter.Text = "0";
+            this.tingleCounter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // trainerModeCheckbox
+            // 
+            this.trainerModeCheckbox.AutoSize = true;
+            this.trainerModeCheckbox.Location = new System.Drawing.Point(214, 59);
+            this.trainerModeCheckbox.Name = "trainerModeCheckbox";
+            this.trainerModeCheckbox.Size = new System.Drawing.Size(89, 17);
+            this.trainerModeCheckbox.TabIndex = 48;
+            this.trainerModeCheckbox.Text = "Trainer Mode";
+            this.trainerModeCheckbox.UseVisualStyleBackColor = true;
+            this.trainerModeCheckbox.CheckedChanged += new System.EventHandler(this.trainerModeCheckbox_CheckedChanged);
+            // 
+            // hurricaneSpinPicture
+            // 
+            this.hurricaneSpinPicture.Image = global::TWW_Coop.Resources.item_HurricaneSpinN;
+            this.hurricaneSpinPicture.Location = new System.Drawing.Point(712, 236);
+            this.hurricaneSpinPicture.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.hurricaneSpinPicture.Name = "hurricaneSpinPicture";
+            this.hurricaneSpinPicture.Size = new System.Drawing.Size(21, 21);
+            this.hurricaneSpinPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.hurricaneSpinPicture.TabIndex = 50;
+            this.hurricaneSpinPicture.TabStop = false;
+            this.hurricaneSpinPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.hurricaneSpinPicture_Click);
+            // 
+            // walletPicture
+            // 
+            this.walletPicture.Image = global::TWW_Coop.Resources.capacity_WalletN;
+            this.walletPicture.Location = new System.Drawing.Point(712, 292);
+            this.walletPicture.Name = "walletPicture";
+            this.walletPicture.Size = new System.Drawing.Size(51, 52);
+            this.walletPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.walletPicture.TabIndex = 47;
+            this.walletPicture.TabStop = false;
+            this.walletPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.walletPicture_Click);
+            // 
+            // songOfPassingPicture
+            // 
+            this.songOfPassingPicture.Image = global::TWW_Coop.Resources.item_WindWakerN;
+            this.songOfPassingPicture.Location = new System.Drawing.Point(844, 289);
+            this.songOfPassingPicture.Name = "songOfPassingPicture";
+            this.songOfPassingPicture.Size = new System.Drawing.Size(51, 52);
+            this.songOfPassingPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.songOfPassingPicture.TabIndex = 46;
+            this.songOfPassingPicture.TabStop = false;
+            this.songOfPassingPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.songOfPassingPicture_Click);
+            // 
+            // windGodsAriaPicture
+            // 
+            this.windGodsAriaPicture.Image = global::TWW_Coop.Resources.item_WindWakerN;
+            this.windGodsAriaPicture.Location = new System.Drawing.Point(844, 236);
+            this.windGodsAriaPicture.Name = "windGodsAriaPicture";
+            this.windGodsAriaPicture.Size = new System.Drawing.Size(51, 52);
+            this.windGodsAriaPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.windGodsAriaPicture.TabIndex = 45;
+            this.windGodsAriaPicture.TabStop = false;
+            this.windGodsAriaPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.windGodsAriaPicture_Click);
+            // 
+            // earthGodsLyricPicture
+            // 
+            this.earthGodsLyricPicture.Image = global::TWW_Coop.Resources.item_WindWakerN;
+            this.earthGodsLyricPicture.Location = new System.Drawing.Point(844, 183);
+            this.earthGodsLyricPicture.Name = "earthGodsLyricPicture";
+            this.earthGodsLyricPicture.Size = new System.Drawing.Size(51, 52);
+            this.earthGodsLyricPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.earthGodsLyricPicture.TabIndex = 44;
+            this.earthGodsLyricPicture.TabStop = false;
+            this.earthGodsLyricPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.earthGodsLyricPicture_Click);
+            // 
+            // commandMelodyPicture
+            // 
+            this.commandMelodyPicture.Image = global::TWW_Coop.Resources.item_WindWakerN;
+            this.commandMelodyPicture.Location = new System.Drawing.Point(844, 130);
+            this.commandMelodyPicture.Name = "commandMelodyPicture";
+            this.commandMelodyPicture.Size = new System.Drawing.Size(51, 52);
+            this.commandMelodyPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.commandMelodyPicture.TabIndex = 43;
+            this.commandMelodyPicture.TabStop = false;
+            this.commandMelodyPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.commandMelodyPicture_Click);
+            // 
+            // balladOfGalesPicture
+            // 
+            this.balladOfGalesPicture.Image = global::TWW_Coop.Resources.item_WindWakerN;
+            this.balladOfGalesPicture.Location = new System.Drawing.Point(844, 77);
+            this.balladOfGalesPicture.Name = "balladOfGalesPicture";
+            this.balladOfGalesPicture.Size = new System.Drawing.Size(51, 52);
+            this.balladOfGalesPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.balladOfGalesPicture.TabIndex = 42;
+            this.balladOfGalesPicture.TabStop = false;
+            this.balladOfGalesPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.balladOfGalesPicture_Click);
+            // 
+            // windsRequiemPicture
+            // 
+            this.windsRequiemPicture.Image = global::TWW_Coop.Resources.item_WindWakerN;
+            this.windsRequiemPicture.Location = new System.Drawing.Point(844, 24);
+            this.windsRequiemPicture.Name = "windsRequiemPicture";
+            this.windsRequiemPicture.Size = new System.Drawing.Size(51, 52);
+            this.windsRequiemPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.windsRequiemPicture.TabIndex = 41;
+            this.windsRequiemPicture.TabStop = false;
+            this.windsRequiemPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.windsRequiemPicture_Click);
+            // 
+            // tingleStatuePicture
+            // 
+            this.tingleStatuePicture.Image = global::TWW_Coop.Resources.quest_TingleStatue;
+            this.tingleStatuePicture.Location = new System.Drawing.Point(655, 292);
+            this.tingleStatuePicture.Name = "tingleStatuePicture";
+            this.tingleStatuePicture.Size = new System.Drawing.Size(51, 52);
+            this.tingleStatuePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.tingleStatuePicture.TabIndex = 39;
+            this.tingleStatuePicture.TabStop = false;
+            this.tingleStatuePicture.Click += new System.EventHandler(this.tingleStatuePicture_Click);
+            // 
+            // ghostShipChartPicture
+            // 
+            this.ghostShipChartPicture.Image = global::TWW_Coop.Resources.item_GhostShipChartN;
+            this.ghostShipChartPicture.Location = new System.Drawing.Point(541, 204);
+            this.ghostShipChartPicture.Name = "ghostShipChartPicture";
+            this.ghostShipChartPicture.Size = new System.Drawing.Size(51, 52);
+            this.ghostShipChartPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.ghostShipChartPicture.TabIndex = 38;
+            this.ghostShipChartPicture.TabStop = false;
+            // 
+            // cabanaDeedPicture
+            // 
+            this.cabanaDeedPicture.Image = global::TWW_Coop.Resources.item_CabanaDeedN;
+            this.cabanaDeedPicture.Location = new System.Drawing.Point(598, 204);
+            this.cabanaDeedPicture.Name = "cabanaDeedPicture";
+            this.cabanaDeedPicture.Size = new System.Drawing.Size(51, 52);
+            this.cabanaDeedPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.cabanaDeedPicture.TabIndex = 37;
+            this.cabanaDeedPicture.TabStop = false;
             // 
             // magicPicture
             // 
@@ -510,157 +669,13 @@ namespace TWW_Coop
             this.swordPicture.TabStop = false;
             this.swordPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.swordPicture_Click);
             // 
-            // cabanaDeedPicture
-            // 
-            this.cabanaDeedPicture.Image = global::TWW_Coop.Resources.item_CabanaDeedN;
-            this.cabanaDeedPicture.Location = new System.Drawing.Point(598, 204);
-            this.cabanaDeedPicture.Name = "cabanaDeedPicture";
-            this.cabanaDeedPicture.Size = new System.Drawing.Size(51, 52);
-            this.cabanaDeedPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.cabanaDeedPicture.TabIndex = 37;
-            this.cabanaDeedPicture.TabStop = false;
-            // 
-            // ghostShipChartPicture
-            // 
-            this.ghostShipChartPicture.Image = global::TWW_Coop.Resources.item_GhostShipChartN;
-            this.ghostShipChartPicture.Location = new System.Drawing.Point(541, 204);
-            this.ghostShipChartPicture.Name = "ghostShipChartPicture";
-            this.ghostShipChartPicture.Size = new System.Drawing.Size(51, 52);
-            this.ghostShipChartPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.ghostShipChartPicture.TabIndex = 38;
-            this.ghostShipChartPicture.TabStop = false;
-            // 
-            // tingleStatuePicture
-            // 
-            this.tingleStatuePicture.Image = global::TWW_Coop.Resources.quest_TingleStatue;
-            this.tingleStatuePicture.Location = new System.Drawing.Point(655, 292);
-            this.tingleStatuePicture.Name = "tingleStatuePicture";
-            this.tingleStatuePicture.Size = new System.Drawing.Size(51, 52);
-            this.tingleStatuePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.tingleStatuePicture.TabIndex = 39;
-            this.tingleStatuePicture.TabStop = false;
-            this.tingleStatuePicture.Click += new System.EventHandler(this.tingleStatuePicture_Click);
-            // 
-            // bottleCounter
-            // 
-            this.bottleCounter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bottleCounter.AutoSize = true;
-            this.bottleCounter.BackColor = System.Drawing.Color.White;
-            this.bottleCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bottleCounter.Location = new System.Drawing.Point(519, 240);
-            this.bottleCounter.Name = "bottleCounter";
-            this.bottleCounter.Size = new System.Drawing.Size(16, 16);
-            this.bottleCounter.TabIndex = 34;
-            this.bottleCounter.Text = "0";
-            this.bottleCounter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // tingleCounter
-            // 
-            this.tingleCounter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.tingleCounter.AutoSize = true;
-            this.tingleCounter.BackColor = System.Drawing.Color.White;
-            this.tingleCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tingleCounter.Location = new System.Drawing.Point(690, 328);
-            this.tingleCounter.Name = "tingleCounter";
-            this.tingleCounter.Size = new System.Drawing.Size(16, 16);
-            this.tingleCounter.TabIndex = 40;
-            this.tingleCounter.Text = "0";
-            this.tingleCounter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // windsRequiemPicture
-            // 
-            this.windsRequiemPicture.Image = global::TWW_Coop.Resources.item_WindWakerN;
-            this.windsRequiemPicture.Location = new System.Drawing.Point(844, 24);
-            this.windsRequiemPicture.Name = "windsRequiemPicture";
-            this.windsRequiemPicture.Size = new System.Drawing.Size(51, 52);
-            this.windsRequiemPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.windsRequiemPicture.TabIndex = 41;
-            this.windsRequiemPicture.TabStop = false;
-            this.windsRequiemPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.windsRequiemPicture_Click);
-            // 
-            // balladOfGalesPicture
-            // 
-            this.balladOfGalesPicture.Image = global::TWW_Coop.Resources.item_WindWakerN;
-            this.balladOfGalesPicture.Location = new System.Drawing.Point(844, 77);
-            this.balladOfGalesPicture.Name = "balladOfGalesPicture";
-            this.balladOfGalesPicture.Size = new System.Drawing.Size(51, 52);
-            this.balladOfGalesPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.balladOfGalesPicture.TabIndex = 42;
-            this.balladOfGalesPicture.TabStop = false;
-            this.balladOfGalesPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.balladOfGalesPicture_Click);
-            // 
-            // commandMelodyPicture
-            // 
-            this.commandMelodyPicture.Image = global::TWW_Coop.Resources.item_WindWakerN;
-            this.commandMelodyPicture.Location = new System.Drawing.Point(844, 130);
-            this.commandMelodyPicture.Name = "commandMelodyPicture";
-            this.commandMelodyPicture.Size = new System.Drawing.Size(51, 52);
-            this.commandMelodyPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.commandMelodyPicture.TabIndex = 43;
-            this.commandMelodyPicture.TabStop = false;
-            this.commandMelodyPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.commandMelodyPicture_Click);
-            // 
-            // earthGodsLyricPicture
-            // 
-            this.earthGodsLyricPicture.Image = global::TWW_Coop.Resources.item_WindWakerN;
-            this.earthGodsLyricPicture.Location = new System.Drawing.Point(844, 183);
-            this.earthGodsLyricPicture.Name = "earthGodsLyricPicture";
-            this.earthGodsLyricPicture.Size = new System.Drawing.Size(51, 52);
-            this.earthGodsLyricPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.earthGodsLyricPicture.TabIndex = 44;
-            this.earthGodsLyricPicture.TabStop = false;
-            this.earthGodsLyricPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.earthGodsLyricPicture_Click);
-            // 
-            // windGodsAriaPicture
-            // 
-            this.windGodsAriaPicture.Image = global::TWW_Coop.Resources.item_WindWakerN;
-            this.windGodsAriaPicture.Location = new System.Drawing.Point(844, 236);
-            this.windGodsAriaPicture.Name = "windGodsAriaPicture";
-            this.windGodsAriaPicture.Size = new System.Drawing.Size(51, 52);
-            this.windGodsAriaPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.windGodsAriaPicture.TabIndex = 45;
-            this.windGodsAriaPicture.TabStop = false;
-            this.windGodsAriaPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.windGodsAriaPicture_Click);
-            // 
-            // songOfPassingPicture
-            // 
-            this.songOfPassingPicture.Image = global::TWW_Coop.Resources.item_WindWakerN;
-            this.songOfPassingPicture.Location = new System.Drawing.Point(844, 289);
-            this.songOfPassingPicture.Name = "songOfPassingPicture";
-            this.songOfPassingPicture.Size = new System.Drawing.Size(51, 52);
-            this.songOfPassingPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.songOfPassingPicture.TabIndex = 46;
-            this.songOfPassingPicture.TabStop = false;
-            this.songOfPassingPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.songOfPassingPicture_Click);
-            // 
-            // walletPicture
-            // 
-            this.walletPicture.Image = global::TWW_Coop.Resources.capacity_WalletN;
-            this.walletPicture.Location = new System.Drawing.Point(712, 292);
-            this.walletPicture.Name = "walletPicture";
-            this.walletPicture.Size = new System.Drawing.Size(51, 52);
-            this.walletPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.walletPicture.TabIndex = 47;
-            this.walletPicture.TabStop = false;
-            this.walletPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.walletPicture_Click);
-            // 
-            // trainerModeCheckbox
-            // 
-            this.trainerModeCheckbox.AutoSize = true;
-            this.trainerModeCheckbox.Location = new System.Drawing.Point(214, 59);
-            this.trainerModeCheckbox.Name = "trainerModeCheckbox";
-            this.trainerModeCheckbox.Size = new System.Drawing.Size(89, 17);
-            this.trainerModeCheckbox.TabIndex = 48;
-            this.trainerModeCheckbox.Text = "Trainer Mode";
-            this.trainerModeCheckbox.UseVisualStyleBackColor = true;
-            this.trainerModeCheckbox.CheckedChanged += new System.EventHandler(this.trainerModeCheckbox_CheckedChanged);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(913, 497);
+            this.Controls.Add(this.hurricaneSpinPicture);
             this.Controls.Add(this.trainerModeCheckbox);
             this.Controls.Add(this.walletPicture);
             this.Controls.Add(this.songOfPassingPicture);
@@ -713,6 +728,17 @@ namespace TWW_Coop
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "TWW Coop";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.hurricaneSpinPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.walletPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.songOfPassingPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.windGodsAriaPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.earthGodsLyricPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commandMelodyPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.balladOfGalesPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.windsRequiemPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tingleStatuePicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ghostShipChartPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cabanaDeedPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.magicPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.powerBraceletsPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.skullHammerPicture)).EndInit();
@@ -742,16 +768,6 @@ namespace TWW_Coop
             ((System.ComponentModel.ISupportInitialize)(this.sailPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.telescopePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.swordPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cabanaDeedPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ghostShipChartPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tingleStatuePicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.windsRequiemPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.balladOfGalesPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commandMelodyPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.earthGodsLyricPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.windGodsAriaPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.songOfPassingPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.walletPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -808,6 +824,7 @@ namespace TWW_Coop
         private System.Windows.Forms.PictureBox songOfPassingPicture;
         private System.Windows.Forms.PictureBox walletPicture;
         private System.Windows.Forms.CheckBox trainerModeCheckbox;
+        private PictureBox hurricaneSpinPicture;
     }
 }
 

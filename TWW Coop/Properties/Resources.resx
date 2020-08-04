@@ -190,14 +190,17 @@
   <data name="item_BombN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\item_BombN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="capacity_MagicN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\capacity_MagicN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="number_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\number_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="item_Sword4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\item_Sword4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pearl_Farore" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\pearl_Farore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="number_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\number_9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="item_Sword3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\item_Sword3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,8 +256,8 @@
   <data name="item_CabanaDeed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\item_CabanaDeed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="number_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\number_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="item_Bow1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\item_Bow1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="item_BowN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\item_BowN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -262,8 +265,8 @@
   <data name="mail_MoblinsLetter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\mail_MoblinsLetter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mail_MaggiesLetter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\mail_MaggiesLetter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="number_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\number_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="item_Shield2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\item_Shield2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -283,8 +286,8 @@
   <data name="bag_BaitBagN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\bag_BaitBagN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="number_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\number_9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mail_MaggiesLetter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\mail_MaggiesLetter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mail_N" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\mail_N.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -318,6 +321,9 @@
   </data>
   <data name="dungeon_SmallKey" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\dungeon_SmallKey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pearl_Farore" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\pearl_Farore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="item_Telescope" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\item_Telescope.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -370,8 +376,11 @@
   <data name="item_BottleN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\item_BottleN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="item_Bow1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\item_Bow1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="capacity_Magic1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\capacity_Magic1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="capacity_Magic2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\capacity_Magic2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="capacity_Wallet1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\capacity_Wallet1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -394,13 +403,10 @@
   <data name="song_WindGodsAria" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\song_WindGodsAria.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="capacity_Magic1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\capacity_Magic1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="item_HurricaneSpin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\item_HurricaneSpin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="capacity_Magic2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\capacity_Magic2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="capacity_MagicN" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\capacity_MagicN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="item_HurricaneSpinN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\item_HurricaneSpinN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
