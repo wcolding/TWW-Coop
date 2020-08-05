@@ -23,6 +23,12 @@ namespace TWW_Coop
         private static bool trainermode = false;
 
         private static PlayerStatus player;
+        private static int playerSize;
+        private static IntPtr playerStatusBuffer;
+
+        private static WorldState state;
+        private static int worldStateSize;
+        private static IntPtr worldStateBuffer;
 
         private List<WWItem> upgradeItems = new List<WWItem>() { WWItem.PictoBox1, WWItem.PictoBox2, WWItem.Bow1, WWItem.Bow2, WWItem.Bow3, WWItem.Sword1, WWItem.Sword2, WWItem.Sword3, WWItem.Sword4, WWItem.Shield1, WWItem.Shield2 };
 
@@ -45,6 +51,17 @@ namespace TWW_Coop
             listeningToDolphin = true;
             dolphinInQueue = new List<string>();
             dolphinListener.RunWorkerAsync();
+        }
+
+        private void FreeUnmangagedBuffers()
+        {
+            Marshal.FreeHGlobal(playerStatusBuffer);
+            Marshal.FreeHGlobal(worldStateBuffer);
+        }
+
+        private void MainFormClosing(object sender, FormClosingEventArgs e)
+        {
+            FreeUnmangagedBuffers();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -71,14 +88,16 @@ namespace TWW_Coop
         private void DolphinListener(object sender, DoWorkEventArgs e)
         {
             player = new PlayerStatus();
-            PlayerStatus old = new PlayerStatus();
-            int playerSize = Marshal.SizeOf(player);
+            PlayerStatus old = new PlayerStatus(); 
+            playerSize = Marshal.SizeOf(player); 
+            playerStatusBuffer = Marshal.AllocHGlobal(playerSize);
 
-            WorldState state = new WorldState();
+            state = new WorldState();
             WorldState oldState = new WorldState();
-            int worldStateSize = Marshal.SizeOf(state);
+            worldStateSize = Marshal.SizeOf(state);
+            worldStateBuffer = Marshal.AllocHGlobal(worldStateSize);
 
-            bool firstPass = true;
+        bool firstPass = true;
 
             while (listeningToDolphin && dolphin.isRunning)
             {
@@ -86,10 +105,8 @@ namespace TWW_Coop
                 
                 if (msg.type == PacketType.PlayerStatusInfo)
                 {
-                    IntPtr buffer = Marshal.AllocHGlobal(playerSize);
-                    Marshal.Copy(msg.data, 0, buffer, playerSize);
-                    player = Marshal.PtrToStructure<PlayerStatus>(buffer);
-                    Marshal.FreeHGlobal(buffer); // perhaps we'll move to allocating on connect and freeing on disconnect?
+                    Marshal.Copy(msg.data, 0, playerStatusBuffer, playerSize);
+                    player = Marshal.PtrToStructure<PlayerStatus>(playerStatusBuffer);
 
                     if (!trainerModeCheckbox.Enabled)
                         Invoke(new Action(() =>
@@ -479,10 +496,8 @@ namespace TWW_Coop
 
                 if (msg.type == PacketType.WorldState)
                 {
-                    IntPtr buffer = Marshal.AllocHGlobal(worldStateSize);
-                    Marshal.Copy(msg.data, 0, buffer, worldStateSize);
-                    state = Marshal.PtrToStructure<WorldState>(buffer);
-                    Marshal.FreeHGlobal(buffer);
+                    Marshal.Copy(msg.data, 0, worldStateBuffer, worldStateSize);
+                    state = Marshal.PtrToStructure<WorldState>(worldStateBuffer);
                     
                     if (firstPass)
                     {
@@ -507,11 +522,10 @@ namespace TWW_Coop
                 {
                     Invoke(new Action(() => { PrintConsole("Dolphin: {0}", dolphinInQueue[0]); }));
                     dolphinInQueue.RemoveAt(0);
-                }
-
-                
-                    
+                }    
             }
+
+            FreeUnmangagedBuffers();
         }
 
         private void ToggleItem(WWItem item, MouseEventArgs e)

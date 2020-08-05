@@ -31,6 +31,7 @@ namespace TWW_Coop
         /// </summary>
         private void InitializeComponent()
         {
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainFormClosing);
             this.modeBox = new System.Windows.Forms.ComboBox();
             this.consoleBox = new System.Windows.Forms.TextBox();
             this.dolphinListener = new System.ComponentModel.BackgroundWorker();
