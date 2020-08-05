@@ -223,6 +223,7 @@ namespace TWW_Coop
             // trainerModeCheckbox
             // 
             this.trainerModeCheckbox.AutoSize = true;
+            this.trainerModeCheckbox.Enabled = false;
             this.trainerModeCheckbox.Location = new System.Drawing.Point(214, 59);
             this.trainerModeCheckbox.Name = "trainerModeCheckbox";
             this.trainerModeCheckbox.Size = new System.Drawing.Size(89, 17);

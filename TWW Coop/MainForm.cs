@@ -90,7 +90,13 @@ namespace TWW_Coop
                     Marshal.Copy(msg.data, 0, buffer, playerSize);
                     player = Marshal.PtrToStructure<PlayerStatus>(buffer);
                     Marshal.FreeHGlobal(buffer); // perhaps we'll move to allocating on connect and freeing on disconnect?
-                    
+
+                    if (!trainerModeCheckbox.Enabled)
+                        Invoke(new Action(() =>
+                        {
+                            trainerModeCheckbox.Enabled = true;
+                        }));
+
                     if (firstPass)
                     {
                         firstPass = false;
