@@ -786,5 +786,34 @@ namespace TWW_Coop
                 chartsForm.ShowDialog();
             }
         }
+
+        private void ShowMailBagTrainer()
+        {
+            if (trainermode)
+            {
+                Trainer_MailBag mailBagForm = new Trainer_MailBag(dolphin, player.bags.deliveryBag);
+                mailBagForm.ShowDialog();
+            }
+        }
+
+        private void maggiesLetterPicture_Click(object sender, EventArgs e)
+        {
+            ShowMailBagTrainer();
+        }
+
+        private void moblinsLetterPicture_Click(object sender, EventArgs e)
+        {
+            ShowMailBagTrainer();
+        }
+
+        private void noteToMomPicture_Click(object sender, EventArgs e)
+        {
+            ShowMailBagTrainer();
+        }
+
+        private void cabanaDeedPicture_Click(object sender, EventArgs e)
+        {
+            ShowMailBagTrainer();
+        }
     }
 }

@@ -14,6 +14,7 @@ namespace TWW_Coop
     {
         private DolphinManager dolphin;
         private WWTriforceMask triforce;
+        private bool initializing = true;
         public Trainer_Triforce(DolphinManager d, WWTriforceMask t)
         {
             dolphin = d;
@@ -24,6 +25,9 @@ namespace TWW_Coop
         }
         private void triforceChecklist_ItemCheck(object sender, ItemCheckEventArgs e)
         {
+            if (initializing)
+                return;
+
             this.BeginInvoke(new Action(() =>
             {
                 byte newTriforce = 0;
@@ -53,6 +57,8 @@ namespace TWW_Coop
 
                 if (((1 << i) & (int)triforce) != 0)
                     triforceChecklist.SetItemChecked(i, true);
+
+                initializing = false;
             }
         }
     }

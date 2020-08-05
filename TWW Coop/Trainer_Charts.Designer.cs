@@ -182,7 +182,7 @@
             // treasure1
             // 
             this.treasure1.AutoSize = true;
-            this.treasure1.Location = new System.Drawing.Point(378, 40);
+            this.treasure1.Location = new System.Drawing.Point(370, 40);
             this.treasure1.Name = "treasure1";
             this.treasure1.Size = new System.Drawing.Size(105, 17);
             this.treasure1.TabIndex = 8;
@@ -193,7 +193,7 @@
             // ghostShip
             // 
             this.ghostShip.AutoSize = true;
-            this.ghostShip.Location = new System.Drawing.Point(198, 40);
+            this.ghostShip.Location = new System.Drawing.Point(194, 40);
             this.ghostShip.Name = "ghostShip";
             this.ghostShip.Size = new System.Drawing.Size(106, 17);
             this.ghostShip.TabIndex = 9;
@@ -204,7 +204,7 @@
             // tingle
             // 
             this.tingle.AutoSize = true;
-            this.tingle.Location = new System.Drawing.Point(198, 63);
+            this.tingle.Location = new System.Drawing.Point(194, 63);
             this.tingle.Name = "tingle";
             this.tingle.Size = new System.Drawing.Size(90, 17);
             this.tingle.TabIndex = 10;
@@ -215,7 +215,7 @@
             // incredible
             // 
             this.incredible.AutoSize = true;
-            this.incredible.Location = new System.Drawing.Point(198, 86);
+            this.incredible.Location = new System.Drawing.Point(194, 86);
             this.incredible.Name = "incredible";
             this.incredible.Size = new System.Drawing.Size(105, 17);
             this.incredible.TabIndex = 11;
@@ -226,7 +226,7 @@
             // octo
             // 
             this.octo.AutoSize = true;
-            this.octo.Location = new System.Drawing.Point(198, 109);
+            this.octo.Location = new System.Drawing.Point(194, 109);
             this.octo.Name = "octo";
             this.octo.Size = new System.Drawing.Size(77, 17);
             this.octo.TabIndex = 12;
@@ -237,7 +237,7 @@
             // greatFairy
             // 
             this.greatFairy.AutoSize = true;
-            this.greatFairy.Location = new System.Drawing.Point(198, 132);
+            this.greatFairy.Location = new System.Drawing.Point(194, 132);
             this.greatFairy.Name = "greatFairy";
             this.greatFairy.Size = new System.Drawing.Size(105, 17);
             this.greatFairy.TabIndex = 13;
@@ -248,7 +248,7 @@
             // islandHearts
             // 
             this.islandHearts.AutoSize = true;
-            this.islandHearts.Location = new System.Drawing.Point(198, 155);
+            this.islandHearts.Location = new System.Drawing.Point(194, 155);
             this.islandHearts.Name = "islandHearts";
             this.islandHearts.Size = new System.Drawing.Size(116, 17);
             this.islandHearts.TabIndex = 14;
@@ -259,7 +259,7 @@
             // seaHearts
             // 
             this.seaHearts.AutoSize = true;
-            this.seaHearts.Location = new System.Drawing.Point(198, 178);
+            this.seaHearts.Location = new System.Drawing.Point(194, 178);
             this.seaHearts.Name = "seaHearts";
             this.seaHearts.Size = new System.Drawing.Size(107, 17);
             this.seaHearts.TabIndex = 15;
@@ -270,7 +270,7 @@
             // secretCave
             // 
             this.secretCave.AutoSize = true;
-            this.secretCave.Location = new System.Drawing.Point(198, 201);
+            this.secretCave.Location = new System.Drawing.Point(194, 201);
             this.secretCave.Name = "secretCave";
             this.secretCave.Size = new System.Drawing.Size(113, 17);
             this.secretCave.TabIndex = 16;
@@ -281,7 +281,7 @@
             // lightRing
             // 
             this.lightRing.AutoSize = true;
-            this.lightRing.Location = new System.Drawing.Point(198, 224);
+            this.lightRing.Location = new System.Drawing.Point(194, 224);
             this.lightRing.Name = "lightRing";
             this.lightRing.Size = new System.Drawing.Size(102, 17);
             this.lightRing.TabIndex = 17;
@@ -292,7 +292,7 @@
             // platform
             // 
             this.platform.AutoSize = true;
-            this.platform.Location = new System.Drawing.Point(198, 247);
+            this.platform.Location = new System.Drawing.Point(194, 247);
             this.platform.Name = "platform";
             this.platform.Size = new System.Drawing.Size(92, 17);
             this.platform.TabIndex = 18;
@@ -303,7 +303,7 @@
             // beedle
             // 
             this.beedle.AutoSize = true;
-            this.beedle.Location = new System.Drawing.Point(198, 270);
+            this.beedle.Location = new System.Drawing.Point(194, 270);
             this.beedle.Name = "beedle";
             this.beedle.Size = new System.Drawing.Size(94, 17);
             this.beedle.TabIndex = 19;
@@ -314,7 +314,7 @@
             // submarine
             // 
             this.submarine.AutoSize = true;
-            this.submarine.Location = new System.Drawing.Point(198, 293);
+            this.submarine.Location = new System.Drawing.Point(194, 293);
             this.submarine.Name = "submarine";
             this.submarine.Size = new System.Drawing.Size(104, 17);
             this.submarine.TabIndex = 20;
@@ -325,7 +325,7 @@
             // treasure2
             // 
             this.treasure2.AutoSize = true;
-            this.treasure2.Location = new System.Drawing.Point(378, 63);
+            this.treasure2.Location = new System.Drawing.Point(370, 63);
             this.treasure2.Name = "treasure2";
             this.treasure2.Size = new System.Drawing.Size(105, 17);
             this.treasure2.TabIndex = 21;
@@ -336,7 +336,7 @@
             // treasure4
             // 
             this.treasure4.AutoSize = true;
-            this.treasure4.Location = new System.Drawing.Point(378, 109);
+            this.treasure4.Location = new System.Drawing.Point(370, 109);
             this.treasure4.Name = "treasure4";
             this.treasure4.Size = new System.Drawing.Size(105, 17);
             this.treasure4.TabIndex = 23;
@@ -347,7 +347,7 @@
             // treasure3
             // 
             this.treasure3.AutoSize = true;
-            this.treasure3.Location = new System.Drawing.Point(378, 86);
+            this.treasure3.Location = new System.Drawing.Point(370, 86);
             this.treasure3.Name = "treasure3";
             this.treasure3.Size = new System.Drawing.Size(105, 17);
             this.treasure3.TabIndex = 22;
@@ -358,7 +358,7 @@
             // treasure8
             // 
             this.treasure8.AutoSize = true;
-            this.treasure8.Location = new System.Drawing.Point(378, 201);
+            this.treasure8.Location = new System.Drawing.Point(370, 201);
             this.treasure8.Name = "treasure8";
             this.treasure8.Size = new System.Drawing.Size(105, 17);
             this.treasure8.TabIndex = 27;
@@ -369,7 +369,7 @@
             // treasure7
             // 
             this.treasure7.AutoSize = true;
-            this.treasure7.Location = new System.Drawing.Point(378, 178);
+            this.treasure7.Location = new System.Drawing.Point(370, 178);
             this.treasure7.Name = "treasure7";
             this.treasure7.Size = new System.Drawing.Size(105, 17);
             this.treasure7.TabIndex = 26;
@@ -380,7 +380,7 @@
             // treasure6
             // 
             this.treasure6.AutoSize = true;
-            this.treasure6.Location = new System.Drawing.Point(378, 155);
+            this.treasure6.Location = new System.Drawing.Point(370, 155);
             this.treasure6.Name = "treasure6";
             this.treasure6.Size = new System.Drawing.Size(105, 17);
             this.treasure6.TabIndex = 25;
@@ -391,7 +391,7 @@
             // treasure5
             // 
             this.treasure5.AutoSize = true;
-            this.treasure5.Location = new System.Drawing.Point(378, 132);
+            this.treasure5.Location = new System.Drawing.Point(370, 132);
             this.treasure5.Name = "treasure5";
             this.treasure5.Size = new System.Drawing.Size(105, 17);
             this.treasure5.TabIndex = 24;
@@ -402,7 +402,7 @@
             // treasure12
             // 
             this.treasure12.AutoSize = true;
-            this.treasure12.Location = new System.Drawing.Point(378, 293);
+            this.treasure12.Location = new System.Drawing.Point(370, 293);
             this.treasure12.Name = "treasure12";
             this.treasure12.Size = new System.Drawing.Size(111, 17);
             this.treasure12.TabIndex = 31;
@@ -413,7 +413,7 @@
             // treasure11
             // 
             this.treasure11.AutoSize = true;
-            this.treasure11.Location = new System.Drawing.Point(378, 270);
+            this.treasure11.Location = new System.Drawing.Point(370, 270);
             this.treasure11.Name = "treasure11";
             this.treasure11.Size = new System.Drawing.Size(111, 17);
             this.treasure11.TabIndex = 30;
@@ -424,7 +424,7 @@
             // treasure10
             // 
             this.treasure10.AutoSize = true;
-            this.treasure10.Location = new System.Drawing.Point(378, 247);
+            this.treasure10.Location = new System.Drawing.Point(370, 247);
             this.treasure10.Name = "treasure10";
             this.treasure10.Size = new System.Drawing.Size(111, 17);
             this.treasure10.TabIndex = 29;
@@ -435,7 +435,7 @@
             // treasure9
             // 
             this.treasure9.AutoSize = true;
-            this.treasure9.Location = new System.Drawing.Point(378, 224);
+            this.treasure9.Location = new System.Drawing.Point(370, 224);
             this.treasure9.Name = "treasure9";
             this.treasure9.Size = new System.Drawing.Size(105, 17);
             this.treasure9.TabIndex = 28;
@@ -446,7 +446,7 @@
             // treasure24
             // 
             this.treasure24.AutoSize = true;
-            this.treasure24.Location = new System.Drawing.Point(378, 569);
+            this.treasure24.Location = new System.Drawing.Point(528, 109);
             this.treasure24.Name = "treasure24";
             this.treasure24.Size = new System.Drawing.Size(111, 17);
             this.treasure24.TabIndex = 43;
@@ -457,7 +457,7 @@
             // treasure23
             // 
             this.treasure23.AutoSize = true;
-            this.treasure23.Location = new System.Drawing.Point(378, 546);
+            this.treasure23.Location = new System.Drawing.Point(528, 86);
             this.treasure23.Name = "treasure23";
             this.treasure23.Size = new System.Drawing.Size(111, 17);
             this.treasure23.TabIndex = 42;
@@ -468,7 +468,7 @@
             // treasure22
             // 
             this.treasure22.AutoSize = true;
-            this.treasure22.Location = new System.Drawing.Point(378, 523);
+            this.treasure22.Location = new System.Drawing.Point(528, 63);
             this.treasure22.Name = "treasure22";
             this.treasure22.Size = new System.Drawing.Size(111, 17);
             this.treasure22.TabIndex = 41;
@@ -479,7 +479,7 @@
             // treasure21
             // 
             this.treasure21.AutoSize = true;
-            this.treasure21.Location = new System.Drawing.Point(378, 500);
+            this.treasure21.Location = new System.Drawing.Point(528, 40);
             this.treasure21.Name = "treasure21";
             this.treasure21.Size = new System.Drawing.Size(111, 17);
             this.treasure21.TabIndex = 40;
@@ -490,7 +490,7 @@
             // treasure20
             // 
             this.treasure20.AutoSize = true;
-            this.treasure20.Location = new System.Drawing.Point(378, 477);
+            this.treasure20.Location = new System.Drawing.Point(370, 477);
             this.treasure20.Name = "treasure20";
             this.treasure20.Size = new System.Drawing.Size(111, 17);
             this.treasure20.TabIndex = 39;
@@ -501,7 +501,7 @@
             // treasure19
             // 
             this.treasure19.AutoSize = true;
-            this.treasure19.Location = new System.Drawing.Point(378, 454);
+            this.treasure19.Location = new System.Drawing.Point(370, 454);
             this.treasure19.Name = "treasure19";
             this.treasure19.Size = new System.Drawing.Size(111, 17);
             this.treasure19.TabIndex = 38;
@@ -512,7 +512,7 @@
             // treasure18
             // 
             this.treasure18.AutoSize = true;
-            this.treasure18.Location = new System.Drawing.Point(378, 431);
+            this.treasure18.Location = new System.Drawing.Point(370, 431);
             this.treasure18.Name = "treasure18";
             this.treasure18.Size = new System.Drawing.Size(111, 17);
             this.treasure18.TabIndex = 37;
@@ -523,7 +523,7 @@
             // treasure17
             // 
             this.treasure17.AutoSize = true;
-            this.treasure17.Location = new System.Drawing.Point(378, 408);
+            this.treasure17.Location = new System.Drawing.Point(370, 408);
             this.treasure17.Name = "treasure17";
             this.treasure17.Size = new System.Drawing.Size(111, 17);
             this.treasure17.TabIndex = 36;
@@ -534,7 +534,7 @@
             // treasure16
             // 
             this.treasure16.AutoSize = true;
-            this.treasure16.Location = new System.Drawing.Point(378, 385);
+            this.treasure16.Location = new System.Drawing.Point(370, 385);
             this.treasure16.Name = "treasure16";
             this.treasure16.Size = new System.Drawing.Size(111, 17);
             this.treasure16.TabIndex = 35;
@@ -545,7 +545,7 @@
             // treasure15
             // 
             this.treasure15.AutoSize = true;
-            this.treasure15.Location = new System.Drawing.Point(378, 362);
+            this.treasure15.Location = new System.Drawing.Point(370, 362);
             this.treasure15.Name = "treasure15";
             this.treasure15.Size = new System.Drawing.Size(111, 17);
             this.treasure15.TabIndex = 34;
@@ -556,7 +556,7 @@
             // treasure14
             // 
             this.treasure14.AutoSize = true;
-            this.treasure14.Location = new System.Drawing.Point(378, 339);
+            this.treasure14.Location = new System.Drawing.Point(370, 339);
             this.treasure14.Name = "treasure14";
             this.treasure14.Size = new System.Drawing.Size(111, 17);
             this.treasure14.TabIndex = 33;
@@ -567,7 +567,7 @@
             // treasure13
             // 
             this.treasure13.AutoSize = true;
-            this.treasure13.Location = new System.Drawing.Point(378, 316);
+            this.treasure13.Location = new System.Drawing.Point(370, 316);
             this.treasure13.Name = "treasure13";
             this.treasure13.Size = new System.Drawing.Size(111, 17);
             this.treasure13.TabIndex = 32;
@@ -578,7 +578,7 @@
             // treasure41
             // 
             this.treasure41.AutoSize = true;
-            this.treasure41.Location = new System.Drawing.Point(550, 408);
+            this.treasure41.Location = new System.Drawing.Point(528, 500);
             this.treasure41.Name = "treasure41";
             this.treasure41.Size = new System.Drawing.Size(111, 17);
             this.treasure41.TabIndex = 60;
@@ -589,7 +589,7 @@
             // treasure40
             // 
             this.treasure40.AutoSize = true;
-            this.treasure40.Location = new System.Drawing.Point(550, 385);
+            this.treasure40.Location = new System.Drawing.Point(528, 477);
             this.treasure40.Name = "treasure40";
             this.treasure40.Size = new System.Drawing.Size(111, 17);
             this.treasure40.TabIndex = 59;
@@ -600,7 +600,7 @@
             // treasure39
             // 
             this.treasure39.AutoSize = true;
-            this.treasure39.Location = new System.Drawing.Point(550, 362);
+            this.treasure39.Location = new System.Drawing.Point(528, 454);
             this.treasure39.Name = "treasure39";
             this.treasure39.Size = new System.Drawing.Size(111, 17);
             this.treasure39.TabIndex = 58;
@@ -611,7 +611,7 @@
             // treasure38
             // 
             this.treasure38.AutoSize = true;
-            this.treasure38.Location = new System.Drawing.Point(550, 339);
+            this.treasure38.Location = new System.Drawing.Point(528, 431);
             this.treasure38.Name = "treasure38";
             this.treasure38.Size = new System.Drawing.Size(111, 17);
             this.treasure38.TabIndex = 57;
@@ -622,7 +622,7 @@
             // treasure37
             // 
             this.treasure37.AutoSize = true;
-            this.treasure37.Location = new System.Drawing.Point(550, 316);
+            this.treasure37.Location = new System.Drawing.Point(528, 408);
             this.treasure37.Name = "treasure37";
             this.treasure37.Size = new System.Drawing.Size(111, 17);
             this.treasure37.TabIndex = 56;
@@ -633,7 +633,7 @@
             // treasure36
             // 
             this.treasure36.AutoSize = true;
-            this.treasure36.Location = new System.Drawing.Point(550, 293);
+            this.treasure36.Location = new System.Drawing.Point(528, 385);
             this.treasure36.Name = "treasure36";
             this.treasure36.Size = new System.Drawing.Size(111, 17);
             this.treasure36.TabIndex = 55;
@@ -644,7 +644,7 @@
             // treasure35
             // 
             this.treasure35.AutoSize = true;
-            this.treasure35.Location = new System.Drawing.Point(550, 270);
+            this.treasure35.Location = new System.Drawing.Point(528, 362);
             this.treasure35.Name = "treasure35";
             this.treasure35.Size = new System.Drawing.Size(111, 17);
             this.treasure35.TabIndex = 54;
@@ -655,7 +655,7 @@
             // treasure34
             // 
             this.treasure34.AutoSize = true;
-            this.treasure34.Location = new System.Drawing.Point(550, 247);
+            this.treasure34.Location = new System.Drawing.Point(528, 339);
             this.treasure34.Name = "treasure34";
             this.treasure34.Size = new System.Drawing.Size(111, 17);
             this.treasure34.TabIndex = 53;
@@ -666,7 +666,7 @@
             // treasure33
             // 
             this.treasure33.AutoSize = true;
-            this.treasure33.Location = new System.Drawing.Point(550, 224);
+            this.treasure33.Location = new System.Drawing.Point(528, 316);
             this.treasure33.Name = "treasure33";
             this.treasure33.Size = new System.Drawing.Size(111, 17);
             this.treasure33.TabIndex = 52;
@@ -677,7 +677,7 @@
             // treasure32
             // 
             this.treasure32.AutoSize = true;
-            this.treasure32.Location = new System.Drawing.Point(550, 201);
+            this.treasure32.Location = new System.Drawing.Point(528, 293);
             this.treasure32.Name = "treasure32";
             this.treasure32.Size = new System.Drawing.Size(111, 17);
             this.treasure32.TabIndex = 51;
@@ -688,7 +688,7 @@
             // treasure31
             // 
             this.treasure31.AutoSize = true;
-            this.treasure31.Location = new System.Drawing.Point(550, 178);
+            this.treasure31.Location = new System.Drawing.Point(528, 270);
             this.treasure31.Name = "treasure31";
             this.treasure31.Size = new System.Drawing.Size(111, 17);
             this.treasure31.TabIndex = 50;
@@ -699,7 +699,7 @@
             // treasure30
             // 
             this.treasure30.AutoSize = true;
-            this.treasure30.Location = new System.Drawing.Point(550, 155);
+            this.treasure30.Location = new System.Drawing.Point(528, 247);
             this.treasure30.Name = "treasure30";
             this.treasure30.Size = new System.Drawing.Size(111, 17);
             this.treasure30.TabIndex = 49;
@@ -710,7 +710,7 @@
             // treasure29
             // 
             this.treasure29.AutoSize = true;
-            this.treasure29.Location = new System.Drawing.Point(550, 132);
+            this.treasure29.Location = new System.Drawing.Point(528, 224);
             this.treasure29.Name = "treasure29";
             this.treasure29.Size = new System.Drawing.Size(111, 17);
             this.treasure29.TabIndex = 48;
@@ -721,7 +721,7 @@
             // treasure28
             // 
             this.treasure28.AutoSize = true;
-            this.treasure28.Location = new System.Drawing.Point(550, 109);
+            this.treasure28.Location = new System.Drawing.Point(528, 201);
             this.treasure28.Name = "treasure28";
             this.treasure28.Size = new System.Drawing.Size(111, 17);
             this.treasure28.TabIndex = 47;
@@ -732,7 +732,7 @@
             // treasure27
             // 
             this.treasure27.AutoSize = true;
-            this.treasure27.Location = new System.Drawing.Point(550, 86);
+            this.treasure27.Location = new System.Drawing.Point(528, 178);
             this.treasure27.Name = "treasure27";
             this.treasure27.Size = new System.Drawing.Size(111, 17);
             this.treasure27.TabIndex = 46;
@@ -743,7 +743,7 @@
             // treasure26
             // 
             this.treasure26.AutoSize = true;
-            this.treasure26.Location = new System.Drawing.Point(550, 63);
+            this.treasure26.Location = new System.Drawing.Point(528, 155);
             this.treasure26.Name = "treasure26";
             this.treasure26.Size = new System.Drawing.Size(111, 17);
             this.treasure26.TabIndex = 45;
@@ -754,7 +754,7 @@
             // treasure25
             // 
             this.treasure25.AutoSize = true;
-            this.treasure25.Location = new System.Drawing.Point(550, 40);
+            this.treasure25.Location = new System.Drawing.Point(528, 132);
             this.treasure25.Name = "treasure25";
             this.treasure25.Size = new System.Drawing.Size(111, 17);
             this.treasure25.TabIndex = 44;
@@ -766,7 +766,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(694, 616);
+            this.ClientSize = new System.Drawing.Size(679, 530);
             this.Controls.Add(this.treasure41);
             this.Controls.Add(this.treasure40);
             this.Controls.Add(this.treasure39);

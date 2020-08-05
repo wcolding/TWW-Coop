@@ -14,6 +14,7 @@ namespace TWW_Coop
     {
         private DolphinManager dolphin;
         private byte[] bottles = new byte[4];
+        private bool initializing = true;
         private List<WWBottleContents> bottleIndices = new List<WWBottleContents>()
         {
            WWBottleContents.NoBottle,
@@ -46,10 +47,14 @@ namespace TWW_Coop
             bottleBox2.SelectedIndex = bottleIndices.IndexOf((WWBottleContents)bottles[1]);
             bottleBox3.SelectedIndex = bottleIndices.IndexOf((WWBottleContents)bottles[2]);
             bottleBox4.SelectedIndex = bottleIndices.IndexOf((WWBottleContents)bottles[3]);
+
+            initializing = false;
         }
 
         private void SetBottleFromBox(int index, ComboBox box)
         {
+            if (initializing)
+                return;
             WWBottleContents value = bottleIndices[box.SelectedIndex];
             dolphin.SetBottleSlot(index, (byte)value);
         }

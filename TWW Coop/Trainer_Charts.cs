@@ -14,6 +14,7 @@ namespace TWW_Coop
     {
         private WWChartMask charts;
         private DolphinManager dolphin;
+        private bool initializing = true;
         public Trainer_Charts(DolphinManager d, WWChartMask c)
         {
             charts = c;
@@ -96,10 +97,15 @@ namespace TWW_Coop
             treasure40.Checked = charts.HasFlag(WWChartMask.TreasureChart40);
 
             treasure41.Checked = charts.HasFlag(WWChartMask.TreasureChart41);
+
+            initializing = false;
         }
 
         private void ToggleChart(object sender, WWChartMask chart)
         {
+            if (initializing)
+                return;
+
             CheckBox box = sender as CheckBox;
             if (box.Checked)
                 dolphin.GiveChart(chart);

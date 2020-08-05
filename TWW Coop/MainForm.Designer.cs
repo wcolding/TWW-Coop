@@ -351,6 +351,7 @@ namespace TWW_Coop
             this.cabanaDeedPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.cabanaDeedPicture.TabIndex = 37;
             this.cabanaDeedPicture.TabStop = false;
+            this.cabanaDeedPicture.Click += new System.EventHandler(this.cabanaDeedPicture_Click);
             // 
             // magicPicture
             // 
@@ -406,6 +407,7 @@ namespace TWW_Coop
             this.noteToMomPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.noteToMomPicture.TabIndex = 27;
             this.noteToMomPicture.TabStop = false;
+            this.noteToMomPicture.Click += new System.EventHandler(this.noteToMomPicture_Click);
             // 
             // moblinsLetterPicture
             // 
@@ -416,6 +418,7 @@ namespace TWW_Coop
             this.moblinsLetterPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.moblinsLetterPicture.TabIndex = 26;
             this.moblinsLetterPicture.TabStop = false;
+            this.moblinsLetterPicture.Click += new System.EventHandler(this.moblinsLetterPicture_Click);
             // 
             // maggiesLetterPicture
             // 
@@ -426,6 +429,7 @@ namespace TWW_Coop
             this.maggiesLetterPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.maggiesLetterPicture.TabIndex = 25;
             this.maggiesLetterPicture.TabStop = false;
+            this.maggiesLetterPicture.Click += new System.EventHandler(this.maggiesLetterPicture_Click);
             // 
             // bottlePicture
             // 

@@ -178,7 +178,7 @@ namespace TWW_Coop
 
         public void SetBottleSlot(int slot, byte value)
         {
-            DolphinPacket bottlePacket = new DolphinPacket(PacketType.SetBottles);
+            DolphinPacket bottlePacket = new DolphinPacket(PacketType.SetBottleSlot);
             byte[] slotBytes = BitConverter.GetBytes(slot);
             Array.Copy(slotBytes, bottlePacket.data, 4);
             bottlePacket.data[4] = value;
@@ -198,6 +198,14 @@ namespace TWW_Coop
             byte[] chartBytes = BitConverter.GetBytes((long)charts);
             Array.Copy(chartBytes, chartPacket.data, 8);
             WritePacket(chartPacket);
+        }
+        public void SetMailBagSlot(int slot, byte value)
+        {
+            DolphinPacket mailPacket = new DolphinPacket(PacketType.SetMailSlot);
+            byte[] slotBytes = BitConverter.GetBytes(slot);
+            Array.Copy(slotBytes, mailPacket.data, 4);
+            mailPacket.data[4] = value;
+            WritePacket(mailPacket);
         }
 
         public void AddKeys(short keys)
@@ -250,7 +258,7 @@ namespace TWW_Coop
                 case PacketType.GiveKeys:
                     dataSize = 2;
                     break;
-                case PacketType.SetBottles:
+                case PacketType.SetBottleSlot:
                     dataSize = 5;
                     break;
                 case PacketType.GiveChart:
@@ -258,6 +266,9 @@ namespace TWW_Coop
                     break;
                 case PacketType.RemoveChart:
                     dataSize = 8;
+                    break;
+                case PacketType.SetMailSlot:
+                    dataSize = 5;
                     break;
                 default:
                     break;
@@ -294,8 +305,9 @@ namespace TWW_Coop
         RemovePearl = 11,
         SetTriforce = 12,
         SetStatues = 13,
-        SetBottles = 14,
+        SetBottleSlot = 14,
         GiveChart = 15,
-        RemoveChart = 16
+        RemoveChart = 16,
+        SetMailSlot = 17
     }
 }

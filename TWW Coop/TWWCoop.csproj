@@ -73,6 +73,12 @@
     <Compile Include="Trainer_Charts.Designer.cs">
       <DependentUpon>Trainer_Charts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Trainer_MailBag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trainer_MailBag.Designer.cs">
+      <DependentUpon>Trainer_MailBag.cs</DependentUpon>
+    </Compile>
     <Compile Include="Trainer_Statues.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Trainer_Charts.resx">
       <DependentUpon>Trainer_Charts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trainer_MailBag.resx">
+      <DependentUpon>Trainer_MailBag.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Trainer_Statues.resx">
       <DependentUpon>Trainer_Statues.cs</DependentUpon>

@@ -14,6 +14,7 @@ namespace TWW_Coop
     {
         private DolphinManager dolphin;
         private WWStatueMask statues;
+        private bool initializing = true;
         private List<WWStatueMask> statueIndices = new List<WWStatueMask>() 
         { 
             WWStatueMask.Dragon, 
@@ -34,6 +35,9 @@ namespace TWW_Coop
         
         private void statueChecklist_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (initializing)
+                return;
+
             this.BeginInvoke(new Action(() =>
             {
                 byte newStatues = 0;
@@ -62,6 +66,8 @@ namespace TWW_Coop
                 if ((statueIndices[i] & statues) != 0)
                     statueChecklist.SetItemChecked(i, true);
             }
+
+            initializing = false;
         }
     }
 }
