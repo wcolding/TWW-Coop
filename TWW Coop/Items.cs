@@ -239,6 +239,7 @@ namespace TWW_Coop
         Magic = 5,
         Wallet = 6,
         BowCapacity = 7,
-        BombCapacity = 8
+        BombCapacity = 8,
+        HeartContainer = 9
     }
 }

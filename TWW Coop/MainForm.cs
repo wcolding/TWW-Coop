@@ -40,6 +40,10 @@ namespace TWW_Coop
             triforceCounter.Location = new Point(32, 26);
             triforceCounter.BackColor = Color.Transparent;
 
+            heartsPicture.Controls.Add(heartCounter);
+            heartCounter.Location = new Point(32, 18);
+            heartCounter.BackColor = Color.Transparent;
+
             trainerModeCheckbox.Checked = trainermode;
 
             modeBox.SelectedIndex = 0;
@@ -373,6 +377,12 @@ namespace TWW_Coop
                     if (player.questStatus.statues != old.questStatus.statues)
                     {
                         ThreadSetText(tingleCounter, player.questStatus.GetStatueCount().ToString());
+                    }
+
+                    if (player.status.maxHP != old.status.maxHP)
+                    {
+                        int containers = player.status.maxHP / 4;
+                        ThreadSetText(heartCounter, containers.ToString());
                     }
 
                     if (player.questStatus.pearls != old.questStatus.pearls)
@@ -775,6 +785,10 @@ namespace TWW_Coop
         private void hurricaneSpinPicture_Click(object sender, MouseEventArgs e)
         {
             ToggleItem(WWItem.HurricaneSpin, e);
+        }
+        private void heartsPicture_Click(object sender, MouseEventArgs e)
+        {
+            AdjustItem(ItemCode.HeartContainer, e);
         }
 
 

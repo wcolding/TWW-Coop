@@ -953,6 +953,16 @@ namespace TWW_Coop {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap quest_Hearts {
+            get {
+                object obj = ResourceManager.GetObject("quest_Hearts", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap quest_TingleStatue {
             get {
                 object obj = ResourceManager.GetObject("quest_TingleStatue", resourceCulture);

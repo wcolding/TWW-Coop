@@ -31,7 +31,6 @@ namespace TWW_Coop
         /// </summary>
         private void InitializeComponent()
         {
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainFormClosing);
             this.modeBox = new System.Windows.Forms.ComboBox();
             this.consoleBox = new System.Windows.Forms.TextBox();
             this.dolphinListener = new System.ComponentModel.BackgroundWorker();
@@ -42,6 +41,7 @@ namespace TWW_Coop
             this.bottleCounter = new System.Windows.Forms.Label();
             this.tingleCounter = new System.Windows.Forms.Label();
             this.trainerModeCheckbox = new System.Windows.Forms.CheckBox();
+            this.heartsPicture = new System.Windows.Forms.PictureBox();
             this.hurricaneSpinPicture = new System.Windows.Forms.PictureBox();
             this.walletPicture = new System.Windows.Forms.PictureBox();
             this.songOfPassingPicture = new System.Windows.Forms.PictureBox();
@@ -82,6 +82,8 @@ namespace TWW_Coop
             this.sailPicture = new System.Windows.Forms.PictureBox();
             this.telescopePicture = new System.Windows.Forms.PictureBox();
             this.swordPicture = new System.Windows.Forms.PictureBox();
+            this.heartCounter = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.heartsPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hurricaneSpinPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.walletPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.songOfPassingPicture)).BeginInit();
@@ -149,19 +151,21 @@ namespace TWW_Coop
             // 
             // testButton
             // 
+            this.testButton.Enabled = false;
             this.testButton.Location = new System.Drawing.Point(655, 433);
             this.testButton.Name = "testButton";
             this.testButton.Size = new System.Drawing.Size(150, 41);
             this.testButton.TabIndex = 21;
             this.testButton.Text = "Give Ghost Chart";
             this.testButton.UseVisualStyleBackColor = true;
+            this.testButton.Visible = false;
             this.testButton.Click += new System.EventHandler(this.testButton_Click);
             // 
             // triforceCounter
             // 
             this.triforceCounter.AutoSize = true;
             this.triforceCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triforceCounter.Location = new System.Drawing.Point(572, 292);
+            this.triforceCounter.Location = new System.Drawing.Point(537, 289);
             this.triforceCounter.Name = "triforceCounter";
             this.triforceCounter.Size = new System.Drawing.Size(40, 42);
             this.triforceCounter.TabIndex = 33;
@@ -214,7 +218,7 @@ namespace TWW_Coop
             this.tingleCounter.AutoSize = true;
             this.tingleCounter.BackColor = System.Drawing.Color.White;
             this.tingleCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tingleCounter.Location = new System.Drawing.Point(690, 328);
+            this.tingleCounter.Location = new System.Drawing.Point(651, 325);
             this.tingleCounter.Name = "tingleCounter";
             this.tingleCounter.Size = new System.Drawing.Size(16, 16);
             this.tingleCounter.TabIndex = 40;
@@ -233,6 +237,17 @@ namespace TWW_Coop
             this.trainerModeCheckbox.UseVisualStyleBackColor = true;
             this.trainerModeCheckbox.CheckedChanged += new System.EventHandler(this.trainerModeCheckbox_CheckedChanged);
             // 
+            // heartsPicture
+            // 
+            this.heartsPicture.Image = global::TWW_Coop.Resources.quest_Hearts;
+            this.heartsPicture.Location = new System.Drawing.Point(734, 262);
+            this.heartsPicture.Name = "heartsPicture";
+            this.heartsPicture.Size = new System.Drawing.Size(99, 79);
+            this.heartsPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.heartsPicture.TabIndex = 51;
+            this.heartsPicture.TabStop = false;
+            this.heartsPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.heartsPicture_Click);
+            // 
             // hurricaneSpinPicture
             // 
             this.hurricaneSpinPicture.Image = global::TWW_Coop.Resources.item_HurricaneSpinN;
@@ -248,7 +263,7 @@ namespace TWW_Coop
             // walletPicture
             // 
             this.walletPicture.Image = global::TWW_Coop.Resources.capacity_WalletN;
-            this.walletPicture.Location = new System.Drawing.Point(712, 292);
+            this.walletPicture.Location = new System.Drawing.Point(673, 289);
             this.walletPicture.Name = "walletPicture";
             this.walletPicture.Size = new System.Drawing.Size(51, 52);
             this.walletPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -325,7 +340,7 @@ namespace TWW_Coop
             // tingleStatuePicture
             // 
             this.tingleStatuePicture.Image = global::TWW_Coop.Resources.quest_TingleStatue;
-            this.tingleStatuePicture.Location = new System.Drawing.Point(655, 292);
+            this.tingleStatuePicture.Location = new System.Drawing.Point(616, 289);
             this.tingleStatuePicture.Name = "tingleStatuePicture";
             this.tingleStatuePicture.Size = new System.Drawing.Size(51, 52);
             this.tingleStatuePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -458,7 +473,7 @@ namespace TWW_Coop
             // triforcePicture
             // 
             this.triforcePicture.Image = global::TWW_Coop.Resources.quest_Triforce;
-            this.triforcePicture.Location = new System.Drawing.Point(541, 265);
+            this.triforcePicture.Location = new System.Drawing.Point(506, 262);
             this.triforcePicture.Name = "triforcePicture";
             this.triforcePicture.Size = new System.Drawing.Size(99, 79);
             this.triforcePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -469,7 +484,7 @@ namespace TWW_Coop
             // farorePicture
             // 
             this.farorePicture.Image = global::TWW_Coop.Resources.pearl_N;
-            this.farorePicture.Location = new System.Drawing.Point(490, 311);
+            this.farorePicture.Location = new System.Drawing.Point(460, 308);
             this.farorePicture.Name = "farorePicture";
             this.farorePicture.Size = new System.Drawing.Size(33, 33);
             this.farorePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -480,7 +495,7 @@ namespace TWW_Coop
             // dinPicture
             // 
             this.dinPicture.Image = global::TWW_Coop.Resources.pearl_N;
-            this.dinPicture.Location = new System.Drawing.Point(439, 311);
+            this.dinPicture.Location = new System.Drawing.Point(409, 308);
             this.dinPicture.Name = "dinPicture";
             this.dinPicture.Size = new System.Drawing.Size(33, 33);
             this.dinPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -491,7 +506,7 @@ namespace TWW_Coop
             // nayruPicture
             // 
             this.nayruPicture.Image = global::TWW_Coop.Resources.pearl_N;
-            this.nayruPicture.Location = new System.Drawing.Point(465, 265);
+            this.nayruPicture.Location = new System.Drawing.Point(435, 262);
             this.nayruPicture.Name = "nayruPicture";
             this.nayruPicture.Size = new System.Drawing.Size(33, 33);
             this.nayruPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -676,12 +691,24 @@ namespace TWW_Coop
             this.swordPicture.TabStop = false;
             this.swordPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.swordPicture_Click);
             // 
+            // heartCounter
+            // 
+            this.heartCounter.AutoSize = true;
+            this.heartCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.heartCounter.Location = new System.Drawing.Point(765, 280);
+            this.heartCounter.Name = "heartCounter";
+            this.heartCounter.Size = new System.Drawing.Size(40, 42);
+            this.heartCounter.TabIndex = 52;
+            this.heartCounter.Text = "0";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(913, 497);
+            this.Controls.Add(this.heartCounter);
+            this.Controls.Add(this.heartsPicture);
             this.Controls.Add(this.hurricaneSpinPicture);
             this.Controls.Add(this.trainerModeCheckbox);
             this.Controls.Add(this.walletPicture);
@@ -734,7 +761,9 @@ namespace TWW_Coop
             this.Name = "MainForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "TWW Coop";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainFormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.heartsPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hurricaneSpinPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.walletPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.songOfPassingPicture)).EndInit();
@@ -832,6 +861,8 @@ namespace TWW_Coop
         private System.Windows.Forms.PictureBox walletPicture;
         private System.Windows.Forms.CheckBox trainerModeCheckbox;
         private PictureBox hurricaneSpinPicture;
+        private PictureBox heartsPicture;
+        private Label heartCounter;
     }
 }
 
