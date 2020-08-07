@@ -32,30 +32,32 @@ namespace TWW_Coop
 
             SetCheckboxesFromStatues();
         }
-        
+
         private void statueChecklist_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (initializing)
                 return;
-
-            this.BeginInvoke(new Action(() =>
-            {
-                byte newStatues = 0;
-
-                for (int i = 0; i < 5; i++)
+            if (IsHandleCreated)
+            { 
+                this.BeginInvoke(new Action(() =>
                 {
-                    if (statueChecklist.GetItemChecked(i))
+                    byte newStatues = 0;
+
+                    for (int i = 0; i < 5; i++)
                     {
-                        newStatues |= (byte)statueIndices[i];
+                        if (statueChecklist.GetItemChecked(i))
+                        {
+                            newStatues |= (byte)statueIndices[i];
+                        }
                     }
-                }
 
-                if (newStatues != (byte)statues)
-                {
-                    dolphin.SetStatues(newStatues);
-                    statues = (WWStatueMask)newStatues;
-                }
-            }));
+                    if (newStatues != (byte)statues)
+                    {
+                        dolphin.SetStatues(newStatues);
+                        statues = (WWStatueMask)newStatues;
+                    }
+                }));
+            }
         }
         private void SetCheckboxesFromStatues()
         {

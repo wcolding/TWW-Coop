@@ -28,24 +28,27 @@ namespace TWW_Coop
             if (initializing)
                 return;
 
-            this.BeginInvoke(new Action(() =>
+            if (IsHandleCreated)
             {
-                byte newTriforce = 0;
-
-                for (int i = 0; i < 8; i++)
+                this.BeginInvoke(new Action(() =>
                 {
-                    if (triforceChecklist.GetItemChecked(i))
+                    byte newTriforce = 0;
+
+                    for (int i = 0; i < 8; i++)
                     {
-                        newTriforce |= (byte)(1 << i);
+                        if (triforceChecklist.GetItemChecked(i))
+                        {
+                            newTriforce |= (byte)(1 << i);
+                        }
                     }
-                }
 
-                if (newTriforce != (byte)triforce)
-                {
-                    dolphin.SetTriforce(newTriforce);
-                    triforce = (WWTriforceMask)newTriforce;
-                }
-            }));
+                    if (newTriforce != (byte)triforce)
+                    {
+                        dolphin.SetTriforce(newTriforce);
+                        triforce = (WWTriforceMask)newTriforce;
+                    }
+                }));
+            }
             
         }
 
