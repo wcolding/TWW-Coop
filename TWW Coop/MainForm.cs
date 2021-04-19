@@ -11,6 +11,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Net.Sockets;
 
 namespace TWW_Coop
 {
@@ -81,7 +82,7 @@ namespace TWW_Coop
         private void PrintConsole(string msg, params object[] args)
         {
             string formatted = String.Format(msg, args);
-            consoleBox.Text += formatted + "\r\n";
+            consoleBox.AppendText(formatted + "\r\n");
         }
 
         private void ParseDolphinMsg(object sender, EventArgs e)
@@ -101,7 +102,7 @@ namespace TWW_Coop
             worldStateSize = Marshal.SizeOf(state);
             worldStateBuffer = Marshal.AllocHGlobal(worldStateSize);
 
-        bool firstPass = true;
+            bool firstPass = true;
 
             while (listeningToDolphin && dolphin.isRunning)
             {
@@ -514,6 +515,8 @@ namespace TWW_Coop
                         firstPass = false;
                         oldState = state;
                     }
+
+                    //dolphinInQueue.Add("Received world state info");
 
                     if ((state.StageName != "sea_T") && (state.StageName != "Name") && (state.StageName != "\0\0\0\0\0\0\0\0"))
                     {
