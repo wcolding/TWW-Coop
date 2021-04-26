@@ -225,17 +225,4 @@ namespace TWW_Coop
         TreasureChart3 = (long)1 << 62,
         TreasureChart40 = (long)1 << 63
     }
-    
-    public enum ItemCode : int
-    {
-        PictoBox = 1,
-        Bow = 2,
-        Sword = 3,
-        Shield = 4,
-        Magic = 5,
-        Wallet = 6,
-        BowCapacity = 7,
-        BombCapacity = 8,
-        HeartContainer = 9
-    }
 }
