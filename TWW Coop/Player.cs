@@ -75,7 +75,7 @@ namespace TWW_Coop
     }
 
     [StructLayout(LayoutKind.Sequential, Pack = 1)]
-    public class QuestStatus
+    public class QuestState
     {
         public byte swords;
         public byte shields;
@@ -116,12 +116,12 @@ namespace TWW_Coop
     }
 
     [StructLayout(LayoutKind.Sequential, Pack = 1)]
-    class PlayerStatus
+    public class PlayerState
     {
         public Status status;
         public Inventory inventory;
         public Ammo ammo;
         public BagSection bags;
-        public QuestStatus questStatus;
+        public QuestState questState;
     }
 }

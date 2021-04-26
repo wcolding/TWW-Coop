@@ -1,17 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.IO;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using System.Net.Sockets;
 
 namespace TWW_Coop
 {
@@ -23,9 +15,9 @@ namespace TWW_Coop
         private List<string> dolphinInQueue;
         private static bool trainermode = false;
 
-        private static PlayerStatus player;
+        private static PlayerState player;
         private static int playerSize;
-        private static IntPtr playerStatusBuffer;
+        private static IntPtr playerStateBuffer;
 
         private static WorldState state;
         private static int worldStateSize;
@@ -60,7 +52,7 @@ namespace TWW_Coop
 
         private void FreeUnmangagedBuffers()
         {
-            Marshal.FreeHGlobal(playerStatusBuffer);
+            Marshal.FreeHGlobal(playerStateBuffer);
             Marshal.FreeHGlobal(worldStateBuffer);
         }
 
@@ -92,10 +84,10 @@ namespace TWW_Coop
 
         private void DolphinListener(object sender, DoWorkEventArgs e)
         {
-            player = new PlayerStatus();
-            PlayerStatus old = new PlayerStatus(); 
+            player = new PlayerState();
+            PlayerState old = new PlayerState(); 
             playerSize = Marshal.SizeOf(player); 
-            playerStatusBuffer = Marshal.AllocHGlobal(playerSize);
+            playerStateBuffer = Marshal.AllocHGlobal(playerSize);
 
             state = new WorldState();
             WorldState oldState = new WorldState();
@@ -106,12 +98,12 @@ namespace TWW_Coop
 
             while (listeningToDolphin && dolphin.isRunning)
             {
-                DolphinPacket msg = dolphin.ReadPacket();
+                WWPacket msg = dolphin.ReadPacket();
                 
                 if (msg.type == PacketType.PlayerStatusInfo)
                 {
-                    Marshal.Copy(msg.data, 0, playerStatusBuffer, playerSize);
-                    player = Marshal.PtrToStructure<PlayerStatus>(playerStatusBuffer);
+                    Marshal.Copy(msg.data, 0, playerStateBuffer, playerSize);
+                    player = Marshal.PtrToStructure<PlayerState>(playerStateBuffer);
 
                     if (!trainerModeCheckbox.Enabled)
                         Invoke(new Action(() =>
@@ -370,14 +362,14 @@ namespace TWW_Coop
                             hurricaneSpinPicture.Image = TWW_Coop.Resources.item_HurricaneSpinN;
                     }
 
-                    if (player.questStatus.triforce != old.questStatus.triforce)
+                    if (player.questState.triforce != old.questState.triforce)
                     {
-                        ThreadSetText(triforceCounter, player.questStatus.GetTriforceCount().ToString());
+                        ThreadSetText(triforceCounter, player.questState.GetTriforceCount().ToString());
                     }
 
-                    if (player.questStatus.statues != old.questStatus.statues)
+                    if (player.questState.statues != old.questState.statues)
                     {
-                        ThreadSetText(tingleCounter, player.questStatus.GetStatueCount().ToString());
+                        ThreadSetText(tingleCounter, player.questState.GetStatueCount().ToString());
                     }
 
                     if (player.status.maxHP != old.status.maxHP)
@@ -386,60 +378,60 @@ namespace TWW_Coop
                         ThreadSetText(heartCounter, containers.ToString());
                     }
 
-                    if (player.questStatus.pearls != old.questStatus.pearls)
+                    if (player.questState.pearls != old.questState.pearls)
                     {
-                        if ((player.questStatus.pearls & WWPearlMask.Din) != 0)
+                        if ((player.questState.pearls & WWPearlMask.Din) != 0)
                             dinPicture.Image = TWW_Coop.Resources.pearl_Din;
                         else
                             dinPicture.Image = TWW_Coop.Resources.pearl_N;
 
-                        if ((player.questStatus.pearls & WWPearlMask.Farore) != 0)
+                        if ((player.questState.pearls & WWPearlMask.Farore) != 0)
                             farorePicture.Image = TWW_Coop.Resources.pearl_Farore;
                         else
                             farorePicture.Image = TWW_Coop.Resources.pearl_N;
 
-                        if ((player.questStatus.pearls & WWPearlMask.Nayru) != 0)
+                        if ((player.questState.pearls & WWPearlMask.Nayru) != 0)
                             nayruPicture.Image = TWW_Coop.Resources.pearl_Nayru;
                         else
                             nayruPicture.Image = TWW_Coop.Resources.pearl_N;
                     }
 
-                    if (player.questStatus.songs != old.questStatus.songs)
+                    if (player.questState.songs != old.questState.songs)
                     {
-                        if ((player.questStatus.songs & WWSongMask.WindsRequiem) != 0)
+                        if ((player.questState.songs & WWSongMask.WindsRequiem) != 0)
                             windsRequiemPicture.Image = TWW_Coop.Resources.song_WindsRequiem;
                         else
                             windsRequiemPicture.Image = TWW_Coop.Resources.item_WindWakerN;
 
-                        if ((player.questStatus.songs & WWSongMask.BalladofGales) != 0)
+                        if ((player.questState.songs & WWSongMask.BalladofGales) != 0)
                             balladOfGalesPicture.Image = TWW_Coop.Resources.song_BalladofGales;
                         else
                             balladOfGalesPicture.Image = TWW_Coop.Resources.item_WindWakerN;
 
-                        if ((player.questStatus.songs & WWSongMask.CommandMelody) != 0)
+                        if ((player.questState.songs & WWSongMask.CommandMelody) != 0)
                             commandMelodyPicture.Image = TWW_Coop.Resources.song_CommandMelody;
                         else
                             commandMelodyPicture.Image = TWW_Coop.Resources.item_WindWakerN;
 
-                        if ((player.questStatus.songs & WWSongMask.EarthGodsLyric) != 0)
+                        if ((player.questState.songs & WWSongMask.EarthGodsLyric) != 0)
                             earthGodsLyricPicture.Image = TWW_Coop.Resources.song_EarthGodsLyric;
                         else
                             earthGodsLyricPicture.Image = TWW_Coop.Resources.item_WindWakerN;
 
-                        if ((player.questStatus.songs & WWSongMask.WindGodsAria) != 0)
+                        if ((player.questState.songs & WWSongMask.WindGodsAria) != 0)
                             windGodsAriaPicture.Image = TWW_Coop.Resources.song_WindGodsAria;
                         else
                             windGodsAriaPicture.Image = TWW_Coop.Resources.item_WindWakerN;
 
-                        if ((player.questStatus.songs & WWSongMask.SongofPassing) != 0)
+                        if ((player.questState.songs & WWSongMask.SongofPassing) != 0)
                             songOfPassingPicture.Image = TWW_Coop.Resources.song_SongofPassing;
                         else
                             songOfPassingPicture.Image = TWW_Coop.Resources.item_WindWakerN;
                     }
 
-                    if (player.questStatus.charts != old.questStatus.charts)
+                    if (player.questState.charts != old.questState.charts)
                     {
-                        if (player.questStatus.charts.HasFlag(WWChartMask.GhostShipChart))
+                        if (player.questState.charts.HasFlag(WWChartMask.GhostShipChart))
                             ghostShipChartPicture.Image = TWW_Coop.Resources.item_GhostShipChart;
                         else
                             ghostShipChartPicture.Image = TWW_Coop.Resources.item_GhostShipChartN;
@@ -594,7 +586,7 @@ namespace TWW_Coop
         {
             if (trainermode)
             {
-                Trainer_Triforce triforceForm = new Trainer_Triforce(dolphin, player.questStatus.triforce);
+                Trainer_Triforce triforceForm = new Trainer_Triforce(dolphin, player.questState.triforce);
                 triforceForm.ShowDialog();
             }
         }
@@ -801,7 +793,7 @@ namespace TWW_Coop
         {
             if (trainermode)
             {
-                Trainer_Statues statueForm = new Trainer_Statues(dolphin, player.questStatus.statues);
+                Trainer_Statues statueForm = new Trainer_Statues(dolphin, player.questState.statues);
                 statueForm.ShowDialog();
             }
         }
@@ -819,7 +811,7 @@ namespace TWW_Coop
         {
             if (trainermode)
             {
-                Trainer_Charts chartsForm = new Trainer_Charts(dolphin, player.questStatus.charts);
+                Trainer_Charts chartsForm = new Trainer_Charts(dolphin, player.questState.charts);
                 chartsForm.ShowDialog();
             }
         }
